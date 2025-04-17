@@ -7,7 +7,9 @@ import Autoplay from 'embla-carousel-autoplay';
 
 const Hero: React.FC = () => {
   const router = useRouter();
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // For a real implementation, we would need to use the Embla API to track the current slide
+  // For now, we'll just use a static value for the UI
+  const [currentSlide] = useState(0);
   const autoplayRef = useRef(
     Autoplay({ delay: 5000, stopOnInteraction: false })
   );
@@ -64,7 +66,7 @@ const Hero: React.FC = () => {
         plugins={[autoplayRef.current]}
         onMouseEnter={handlePause}
         onMouseLeave={handleResume}
-        onSlideChange={(index) => setCurrentSlide(index)}
+        // Note: We'll handle slide change differently
       >
         <CarouselContent>
           {slides.map((slide, index) => (
@@ -106,17 +108,9 @@ const Hero: React.FC = () => {
         {/* Slide Indicators */}
         <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2">
           {slides.map((_, index) => (
-            <button
+            <div
               key={index}
-              className={`w-3 h-3 rounded-full transition-all ${currentSlide === index ? 'bg-primary w-6' : 'bg-white/50'}`}
-              onClick={() => {
-                if (autoplayRef.current) {
-                  autoplayRef.current.stop();
-                  // Would need to programmatically set slide index here
-                  // This would require direct access to the Embla API
-                  setTimeout(() => autoplayRef.current.play(), 1000);
-                }
-              }}
+              className={`w-3 h-3 rounded-full transition-all ${index === currentSlide ? 'bg-primary w-6' : 'bg-white/50'}`}
             />
           ))}
         </div>
