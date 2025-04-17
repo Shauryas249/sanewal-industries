@@ -8,15 +8,15 @@ const config = {
   	extend: {
   		colors: {
   			primary: {
-  				'100': '#e6f5e6',
-  				'200': '#c2e0c2',
-  				'300': '#9ecb9e',
-  				'400': '#7ab67a',
-  				'500': '#56a156',
-  				'600': '#3d8c3d',
-  				'700': '#2b772b',
-  				'800': '#1a611a',
-  				'900': '#0a4c0a',
+  				'100': '#e6edf5',
+  				'200': '#ccdaeb',
+  				'300': '#99b5d6',
+  				'400': '#6690c2',
+  				'500': '#336bad',
+  				'600': '#003366', // Deep blue (primary color)
+  				'700': '#002b57',
+  				'800': '#002347',
+  				'900': '#001a38',
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
@@ -51,7 +51,8 @@ const config = {
   			},
   			accent: {
   				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
+  				foreground: 'hsl(var(--accent-foreground))',
+                '500': '#FF6600', // Orange for CTAs
   			},
   			destructive: {
   				DEFAULT: 'hsl(var(--destructive))',
@@ -79,7 +80,11 @@ const config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+      fontFamily: {
+        heading: ['Montserrat', 'sans-serif'],
+        body: ['Open Sans', 'sans-serif'],
+      }
   	}
   },
   plugins: [require("tailwindcss-animate")],
