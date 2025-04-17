@@ -51,11 +51,11 @@ const ProductCategories: React.FC = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-center justify-center mb-6">
-                  <div className="h-64 w-full max-w-md bg-muted rounded-lg overflow-hidden">
+                  <div className="h-64 w-full max-w-md bg-muted rounded-lg overflow-hidden group cursor-zoom-in">
                     <img 
                       src="/images/machined.jpg" 
                       alt="Machined Components" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                 </div>
@@ -72,11 +72,11 @@ const ProductCategories: React.FC = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-center justify-center mb-6">
-                  <div className="h-64 w-full max-w-md bg-muted rounded-lg overflow-hidden">
+                  <div className="h-64 w-full max-w-md bg-muted rounded-lg overflow-hidden group cursor-zoom-in">
                     <img 
                       src="/images/forged.jpg" 
                       alt="Forged Components" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                 </div>
@@ -93,11 +93,11 @@ const ProductCategories: React.FC = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-center justify-center mb-6">
-                  <div className="h-64 w-full max-w-md bg-muted rounded-lg overflow-hidden">
+                  <div className="h-64 w-full max-w-md bg-muted rounded-lg overflow-hidden group cursor-zoom-in">
                     <img 
                       src="/images/automotive.jpg" 
                       alt="Automotive Parts" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                 </div>
