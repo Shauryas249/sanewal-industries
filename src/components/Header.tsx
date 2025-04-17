@@ -58,6 +58,7 @@ const Header = () => {
           <a href="/manufacturing" className={`text-sm font-medium ${isActive('/manufacturing')}`}>Manufacturing</a>
           <a href="/quality" className={`text-sm font-medium ${isActive('/quality')}`}>Quality</a>
           <a href="/gallery" className={`text-sm font-medium ${isActive('/gallery')}`}>Gallery</a>
+          <a href="/data" className={`text-sm font-medium ${isActive('/data')}`}>Data</a>
           <a href="/ethics-compliance" className={`text-sm font-medium ${isActive('/ethics-compliance')}`}>Ethics & Compliance</a>
           <Button variant="outline" size="sm" onClick={() => router.push("/contact")}>
             Contact Us
@@ -140,6 +141,13 @@ const Header = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   Gallery
+                </a>
+                <a 
+                  href="/data" 
+                  className={`flex items-center py-2 px-4 rounded-md ${isActive('/data') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Data
                 </a>
                 <a 
                   href="/ethics-compliance" 
