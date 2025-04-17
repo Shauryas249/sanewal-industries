@@ -1,5 +1,6 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
+import throttle from 'lodash.throttle';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -34,6 +35,9 @@ const Gallery = ({ images, title, description, filterCategories = [] }: GalleryP
   const [filteredImages, setFilteredImages] = useState<GalleryImage[]>(images);
   const [imagesLoaded, setImagesLoaded] = useState<Record<string, boolean>>({});
 
+  // Create a throttled filter function to prevent excessive re-renders
+  const throttledFilterRef = useRef<Function>();
+  
   // Filter images based on selected tags
   const filterImages = useCallback(() => {
     if (selectedTags.length === 0) {
@@ -53,10 +57,22 @@ const Gallery = ({ images, title, description, filterCategories = [] }: GalleryP
 
     setFilteredImages(filtered);
   }, [images, selectedTags, filterLogic]);
+  
+  // Initialize throttled filter function
+  useEffect(() => {
+    throttledFilterRef.current = throttle(filterImages, 300);
+    return () => {
+      throttledFilterRef.current?.cancel?.();
+    };
+  }, [filterImages]);
 
   // Apply filtering when selected tags or filter logic changes
   useEffect(() => {
-    filterImages();
+    if (throttledFilterRef.current) {
+      throttledFilterRef.current();
+    } else {
+      filterImages();
+    }
   }, [filterImages, selectedTags, filterLogic]);
 
   const handleImageLoad = (imageId: string) => {
@@ -99,7 +115,7 @@ const Gallery = ({ images, title, description, filterCategories = [] }: GalleryP
   };
 
   return (
-    <div className="py-8 space-y-8">
+    <div className="py-8 space-y-8" role="region" aria-label="Image gallery">
       {title && <h2 className="text-3xl font-bold mb-4">{title}</h2>}
       {description && <p className="text-muted-foreground mb-8">{description}</p>}
       
@@ -125,31 +141,40 @@ const Gallery = ({ images, title, description, filterCategories = [] }: GalleryP
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="masonry-grid columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
           {filteredImages.map((image) => (
-            <Card 
-              key={image.id} 
-              className="overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col"
-            >
-              <div 
-                className="relative cursor-pointer"
-                onClick={() => openLightbox(image)}
+            <div key={image.id} className="break-inside-avoid mb-6">
+              <Card 
+                className="overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col h-full"
               >
-                <AspectRatio ratio={4/3}>
-                  {!imagesLoaded[image.id] && (
-                    <Skeleton className="absolute inset-0 z-10" />
-                  )}
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    onLoad={() => handleImageLoad(image.id)}
-                    priority={false}
-                  />
-                </AspectRatio>
-              </div>
+                <div 
+                  className="relative cursor-pointer"
+                  onClick={() => openLightbox(image)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      openLightbox(image);
+                    }
+                  }}
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`View ${image.title || image.alt}`}
+                >
+                  <div className="relative" style={{ paddingBottom: `${(image.height / image.width) * 100}%` }}>
+                    {!imagesLoaded[image.id] && (
+                      <Skeleton className="absolute inset-0 z-10" />
+                    )}
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      onLoad={() => handleImageLoad(image.id)}
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
               
               {(image.title || image.description) && (
                 <CardContent className="p-4">

@@ -36,11 +36,11 @@ const Lightbox = ({
     setPosition({ x: 0, y: 0 });
   }, [image]);
 
-  // Handle keyboard navigation
+  // Handle keyboard navigation and trap focus
   useEffect(() => {
+    if (!isOpen) return;
+    
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (!isOpen) return;
-      
       switch (e.key) {
         case 'ArrowLeft':
           onPrevious();
@@ -62,8 +62,52 @@ const Lightbox = ({
       }
     };
 
+    // Save the previously focused element
+    const previouslyFocused = document.activeElement as HTMLElement;
+
+    // Focus trap management
+    const handleFocusTrap = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      
+      // Get all focusable elements in the lightbox
+      const focusableElements = document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      
+      const firstElement = focusableElements[0] as HTMLElement;
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+      
+      // If shift+tab and on first element, move to last element
+      if (e.shiftKey && document.activeElement === firstElement) {
+        e.preventDefault();
+        lastElement.focus();
+      }
+      
+      // If tab and on last element, move to first element
+      else if (!e.shiftKey && document.activeElement === lastElement) {
+        e.preventDefault();
+        firstElement.focus();
+      }
+    };
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('keydown', handleFocusTrap);
+    
+    // Focus the first button in the lightbox
+    const firstButton = document.querySelector('.lightbox-container button') as HTMLElement;
+    if (firstButton) {
+      setTimeout(() => firstButton.focus(), 100);
+    }
+    
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keydown', handleFocusTrap);
+      
+      // Restore focus when lightbox closes
+      if (previouslyFocused) {
+        setTimeout(() => previouslyFocused.focus(), 100);
+      }
+    };
   }, [isOpen, onNext, onPrevious, onClose]);
 
   const handleZoomIn = () => {
@@ -109,7 +153,7 @@ const Lightbox = ({
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        <div className="relative w-full h-full flex flex-col">
+        <div className="relative w-full h-full flex flex-col lightbox-container">
           {/* Toolbar */}
           <div className="absolute top-0 left-0 right-0 z-10 flex justify-between items-center p-4 bg-background/80">
             <div className="text-sm text-muted-foreground">
