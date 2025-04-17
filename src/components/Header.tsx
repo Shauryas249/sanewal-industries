@@ -18,6 +18,7 @@ const Header = () => {
           <a href="/products" className="text-sm font-medium hover:text-primary transition-colors">Products</a>
           <a href="/manufacturing" className="text-sm font-medium hover:text-primary transition-colors">Manufacturing</a>
           <a href="/quality" className="text-sm font-medium hover:text-primary transition-colors">Quality</a>
+          <a href="/ethics-compliance" className="text-sm font-medium hover:text-primary transition-colors">Ethics & Compliance</a>
           <Button variant="outline" size="sm" onClick={() => router.push("/contact")}>
             Contact Us
           </Button>
