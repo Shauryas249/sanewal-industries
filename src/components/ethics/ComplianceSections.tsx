@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
-import { Shield, AlertTriangle, Lock, DollarSign, Users, Leaf, Heart, Bell, Briefcase, Scale, Tool } from 'lucide-react';
+import { Shield, AlertTriangle, Lock, DollarSign, Users, Leaf, Heart, Bell, Briefcase, Scale, Wrench } from 'lucide-react';
 
 const ComplianceSections: React.FC = () => {
   const sections = [
@@ -177,7 +177,7 @@ const ComplianceSections: React.FC = () => {
     {
       id: 'equipment',
       title: 'Ethical Use of Equipment',
-      icon: <Tool className="h-6 w-6 text-primary" />,
+      icon: <Wrench className="h-6 w-6 text-primary" />,
       content: (
         <>
           <p className="mb-4">
