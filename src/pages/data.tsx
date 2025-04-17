@@ -13,62 +13,64 @@ const DataPage: NextPage = () => {
         <meta name="description" content="Explore our performance metrics and data visualizations at Sanewal Auto Engineers." />
       </Head>
 
-      <Header />
+      <div className="bg-background min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1 py-12">
+          <div className="container mx-auto text-center">
+            <div className="max-w-3xl mx-auto mb-8">
+              <h1 className="text-4xl font-bold mb-6">Performance Metrics</h1>
+              <p className="text-lg text-muted-foreground">
+                Explore our key performance indicators and metrics through interactive data visualizations.
+                These charts provide insights into our production volumes, quality metrics, and market presence.
+              </p>
+            </div>
 
-      <main className="min-h-screen py-12">
-        <div className="container">
-          <h1 className="text-4xl font-bold mb-6">Performance Metrics</h1>
-          <p className="text-lg text-muted-foreground mb-8">
-            Explore our key performance indicators and metrics through interactive data visualizations.
-            These charts provide insights into our production volumes, quality metrics, and market presence.
-          </p>
+            <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+              <DataVisualization 
+                title="Production & Quality Metrics" 
+                description="Interactive charts showing our production volumes, quality metrics, and market share"
+              />
 
-          <div className="grid grid-cols-1 gap-8">
-            <DataVisualization 
-              title="Production & Quality Metrics" 
-              description="Interactive charts showing our production volumes, quality metrics, and market share"
-            />
+              <Card>
+                <CardHeader className="text-center">
+                  <CardTitle>Understanding Our Metrics</CardTitle>
+                  <CardDescription>Key insights from our performance data</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="text-center">
+                    <h3 className="text-lg font-medium mb-2">Production Volume</h3>
+                    <p>
+                      Our production volume data showcases the monthly output across our three main product categories: 
+                      machined components, forged components, and automotive parts. The data demonstrates our 
+                      manufacturing capacity and production trends over time.
+                    </p>
+                  </div>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Understanding Our Metrics</CardTitle>
-                <CardDescription>Key insights from our performance data</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-medium mb-2">Production Volume</h3>
-                  <p>
-                    Our production volume data showcases the monthly output across our three main product categories: 
-                    machined components, forged components, and automotive parts. The data demonstrates our 
-                    manufacturing capacity and production trends over time.
-                  </p>
-                </div>
+                  <div className="text-center">
+                    <h3 className="text-lg font-medium mb-2">Quality Metrics</h3>
+                    <p>
+                      Quality is at the core of our manufacturing philosophy. Our defect rate trend shows 
+                      continuous improvement in our quality control processes, with defect rates consistently 
+                      below industry standards. This reflects our commitment to delivering high-quality 
+                      components to our customers.
+                    </p>
+                  </div>
 
-                <div>
-                  <h3 className="text-lg font-medium mb-2">Quality Metrics</h3>
-                  <p>
-                    Quality is at the core of our manufacturing philosophy. Our defect rate trend shows 
-                    continuous improvement in our quality control processes, with defect rates consistently 
-                    below industry standards. This reflects our commitment to delivering high-quality 
-                    components to our customers.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-medium mb-2">Market Share</h3>
-                  <p>
-                    Our market share visualization illustrates our presence across different industry sectors. 
-                    While we maintain a strong focus on automotive components, we have successfully diversified 
-                    into industrial and aerospace applications, demonstrating our versatility and adaptability.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+                  <div className="text-center">
+                    <h3 className="text-lg font-medium mb-2">Market Share</h3>
+                    <p>
+                      Our market share visualization illustrates our presence across different industry sectors. 
+                      While we maintain a strong focus on automotive components, we have successfully diversified 
+                      into industrial and aerospace applications, demonstrating our versatility and adaptability.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
-        </div>
-      </main>
-
-      <Footer />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 };

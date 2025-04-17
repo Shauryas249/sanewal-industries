@@ -53,9 +53,9 @@ interface DataVisualizationProps {
 
 const DataVisualization = ({ title = "Performance Metrics", description }: DataVisualizationProps) => {
   return (
-    <div className="container py-8">
+    <div className="w-full">
       <Card>
-        <CardHeader>
+        <CardHeader className="text-center">
           <CardTitle>{title}</CardTitle>
           {description && <CardDescription>{description}</CardDescription>}
         </CardHeader>
@@ -68,7 +68,7 @@ const DataVisualization = ({ title = "Performance Metrics", description }: DataV
             </TabsList>
             
             <TabsContent value="production" className="space-y-4">
-              <h3 className="text-lg font-medium">Monthly Production Volume by Product Type</h3>
+              <h3 className="text-lg font-medium text-center">Monthly Production Volume by Product Type</h3>
               <div className="h-[400px] w-full">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
@@ -86,14 +86,14 @@ const DataVisualization = ({ title = "Performance Metrics", description }: DataV
                   </BarChart>
                 </ResponsiveContainer>
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-sm text-muted-foreground mt-4 text-center max-w-3xl mx-auto">
                 This chart shows the monthly production volume for each product category. 
                 The data indicates strong growth in forged components production in March.
               </p>
             </TabsContent>
             
             <TabsContent value="quality" className="space-y-4">
-              <h3 className="text-lg font-medium">Monthly Defect Rate Trend</h3>
+              <h3 className="text-lg font-medium text-center">Monthly Defect Rate Trend</h3>
               <div className="h-[400px] w-full">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart
@@ -115,7 +115,7 @@ const DataVisualization = ({ title = "Performance Metrics", description }: DataV
                   </LineChart>
                 </ResponsiveContainer>
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-sm text-muted-foreground mt-4 text-center max-w-3xl mx-auto">
                 This chart shows the monthly defect rate trend. The data indicates a significant 
                 improvement in quality over the first half of the year, with defect rates 
                 decreasing from 0.8% to 0.2%.
@@ -123,7 +123,7 @@ const DataVisualization = ({ title = "Performance Metrics", description }: DataV
             </TabsContent>
             
             <TabsContent value="market" className="space-y-4">
-              <h3 className="text-lg font-medium">Market Share by Industry</h3>
+              <h3 className="text-lg font-medium text-center">Market Share by Industry</h3>
               <div className="h-[400px] w-full">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
@@ -146,7 +146,7 @@ const DataVisualization = ({ title = "Performance Metrics", description }: DataV
                   </PieChart>
                 </ResponsiveContainer>
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-sm text-muted-foreground mt-4 text-center max-w-3xl mx-auto">
                 This chart shows our market share across different industries. The automotive 
                 sector represents our largest market at 45%, followed by industrial applications 
                 at 30%.
