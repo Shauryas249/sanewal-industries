@@ -55,15 +55,15 @@ const Gallery = ({ images, title, description }: GalleryProps) => {
   };
 
   return (
-    <div className="py-8 space-y-8" role="region" aria-label="Image gallery">
+    <div className="py-8 space-y-8 text-center" role="region" aria-label="Image gallery">
       {title && <h2 className="text-3xl font-bold mb-4">{title}</h2>}
-      {description && <p className="text-muted-foreground mb-8">{description}</p>}
+      {description && <p className="text-muted-foreground mb-8 mx-auto max-w-3xl">{description}</p>}
       
-      <div className="masonry-grid columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {images.map((image) => (
-          <div key={image.id} className="break-inside-avoid mb-6">
+          <div key={image.id} className="flex justify-center">
             <Card 
-              className="overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col h-full"
+              className="overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col h-full max-w-sm w-full"
             >
               <div 
                 className="relative cursor-pointer"
@@ -95,7 +95,7 @@ const Gallery = ({ images, title, description }: GalleryProps) => {
               </div>
             
               {(image.title || image.description) && (
-                <CardContent className="p-4">
+                <CardContent className="p-4 text-center">
                   {image.title && (
                     <h3 className="font-medium text-lg mb-1">{image.title}</h3>
                   )}

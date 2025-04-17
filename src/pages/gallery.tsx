@@ -110,18 +110,18 @@ const GalleryPage: NextPage = () => {
       <div className="bg-background min-h-screen flex flex-col">
         <Header />
         <main className="flex-1 py-12">
-          <div className="container">
-            <div className="space-y-4 mb-8">
+          <div className="container mx-auto text-center">
+            <div className="space-y-4 mb-8 max-w-3xl mx-auto">
               <h1 className="text-4xl font-bold">Gallery</h1>
               <p className="text-lg text-muted-foreground">
                 Explore our manufacturing facilities and product showcase through our comprehensive gallery.
               </p>
             </div>
 
-            <Separator className="my-8" />
+            <Separator className="my-8 max-w-4xl mx-auto" />
 
             <section>
-              <div className="mb-8">
+              <div className="mb-8 max-w-3xl mx-auto">
                 <h2 className="text-2xl font-semibold mb-2">Our Facilities & Products</h2>
                 <p className="text-muted-foreground">
                   Our state-of-the-art manufacturing plant features advanced production equipment,
