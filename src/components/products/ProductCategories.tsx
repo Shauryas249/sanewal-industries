@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import ProductList from './ProductList';
 import ProductCard from './ProductCard';
 import { Button } from '@/components/ui/button';
 import { Settings, Hammer, Car, Wrench, Package } from 'lucide-react';
@@ -40,21 +39,66 @@ const ProductCategories: React.FC = () => {
     }
   ];
 
-  const forgedComponents = [
-    "Stud Hood",
-    "Lock Nut",
-    "Steering Head Nut"
+  const forgedComponents: ProductItem[] = [
+    {
+      name: "Stud Hood",
+      description: "High-strength stud for hood mounting and secure fastening",
+    },
+    {
+      name: "Lock Nut",
+      description: "Self-locking nut designed to prevent loosening under vibration",
+    },
+    {
+      name: "Steering Head Nut",
+      description: "Specialized nut for steering column assembly and adjustment",
+    },
+    {
+      name: "Forged Brackets",
+      description: "Durable brackets with superior strength-to-weight ratio",
+    },
+    {
+      name: "Connecting Rods",
+      description: "High-performance connecting rods for engine applications",
+    },
+    {
+      name: "Forged Flanges",
+      description: "Precision flanges for high-pressure and high-temperature systems",
+    }
   ];
 
-  const automotiveParts = [
-    "Rotor Shaft Alternator",
-    "Pole Shoe 1.5 HP",
-    "De-compression",
-    "Fork Bolt",
-    "Upper Case",
-    "Spline Gear Shaft",
-    "Primary Piston",
-    "Rear Piston"
+  const automotiveParts: ProductItem[] = [
+    {
+      name: "Rotor Shaft Alternator",
+      description: "Precision-machined shaft for optimal alternator performance",
+    },
+    {
+      name: "Pole Shoe 1.5 HP",
+      description: "Specialized component for electric motor applications",
+    },
+    {
+      name: "De-compression",
+      description: "Engine decompression mechanism for easier starting",
+    },
+    {
+      name: "Fork Bolt",
+      description: "High-strength bolt for suspension fork assembly",
+    },
+    {
+      name: "Upper Case",
+      description: "Precision-engineered housing for automotive components",
+    },
+    {
+      name: "Spline Gear Shaft",
+      description: "Specialized shaft with spline profile for power transmission",
+    },
+    {
+      name: "Primary Piston",
+      description: "High-performance piston for primary hydraulic systems",
+    },
+    {
+      name: "Rear Piston",
+      description: "Specialized piston for rear brake or hydraulic applications",
+    }
   ];
 
   return (
@@ -141,55 +185,57 @@ const ProductCategories: React.FC = () => {
           </TabsContent>
           
           <TabsContent value="forged" className="mt-6">
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex items-center justify-center mb-6">
-                  <div className="h-64 w-full max-w-md bg-muted rounded-lg overflow-hidden group cursor-zoom-in">
-                    <img 
-                      src="/images/forged.jpg" 
-                      alt="Forged Components" 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-center">Forged Components</h3>
-                <p className="text-muted-foreground mb-6 text-center">
-                  High-strength forged components designed for durability and performance.
-                </p>
-                <ProductList items={forgedComponents} />
-                <div className="flex justify-center mt-8">
-                  <Button variant="outline">
-                    View All Forged Components
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-4">Forged Components</h3>
+              <p className="text-muted-foreground mb-6">
+                High-strength forged components designed for durability and performance.
+              </p>
+              
+              {/* Card Grid Layout for Forged Components */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                {forgedComponents.map((item, index) => (
+                  <ProductCard 
+                    key={index}
+                    name={item.name}
+                    description={item.description}
+                    imagePath={item.imagePath}
+                  />
+                ))}
+              </div>
+              
+              <div className="flex justify-center mt-8">
+                <Button variant="outline">
+                  View All Forged Components
+                </Button>
+              </div>
+            </div>
           </TabsContent>
           
           <TabsContent value="automotive" className="mt-6">
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex items-center justify-center mb-6">
-                  <div className="h-64 w-full max-w-md bg-muted rounded-lg overflow-hidden group cursor-zoom-in">
-                    <img 
-                      src="/images/automotive.jpg" 
-                      alt="Automotive Parts" 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-center">Automotive Parts</h3>
-                <p className="text-muted-foreground mb-6 text-center">
-                  Specialized automotive components engineered for optimal performance and reliability.
-                </p>
-                <ProductList items={automotiveParts} />
-                <div className="flex justify-center mt-8">
-                  <Button variant="outline">
-                    View All Automotive Parts
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-4">Automotive Parts</h3>
+              <p className="text-muted-foreground mb-6">
+                Specialized automotive components engineered for optimal performance and reliability.
+              </p>
+              
+              {/* Card Grid Layout for Automotive Parts */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                {automotiveParts.map((item, index) => (
+                  <ProductCard 
+                    key={index}
+                    name={item.name}
+                    description={item.description}
+                    imagePath={item.imagePath}
+                  />
+                ))}
+              </div>
+              
+              <div className="flex justify-center mt-8">
+                <Button variant="outline">
+                  View All Automotive Parts
+                </Button>
+              </div>
+            </div>
           </TabsContent>
         </Tabs>
       </div>
