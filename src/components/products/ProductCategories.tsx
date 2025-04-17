@@ -2,14 +2,42 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import ProductList from './ProductList';
+import ProductCard from './ProductCard';
+import { Button } from '@/components/ui/button';
+import { Settings, Hammer, Car, Wrench, Package } from 'lucide-react';
+
+interface ProductItem {
+  name: string;
+  description: string;
+  imagePath?: string;
+}
 
 const ProductCategories: React.FC = () => {
-  const machinedComponents = [
-    "Adjusting Pin",
-    "Banjo Bolt M12",
-    "Banjo Bolt M22",
-    "Collars (Pinion, Shift, Oil Lock, Wheel Side)",
-    "Pins (Gear Shift, Sector)"
+  const machinedComponents: ProductItem[] = [
+    {
+      name: "Adjusting Pin",
+      description: "Precision-engineered pin for accurate adjustments and alignments",
+    },
+    {
+      name: "Banjo Bolt M12",
+      description: "Hollow bolt designed for fluid passage in brake and fuel systems",
+    },
+    {
+      name: "Banjo Bolt M22",
+      description: "Heavy-duty hollow bolt for high-pressure fluid systems",
+    },
+    {
+      name: "Collars",
+      description: "Various collar types including Pinion, Shift, Oil Lock, and Wheel Side",
+    },
+    {
+      name: "Pins",
+      description: "Specialized pins including Gear Shift and Sector variants",
+    },
+    {
+      name: "Custom Machined Parts",
+      description: "Tailored machined components to meet specific requirements",
+    }
   ];
 
   const forgedComponents = [
@@ -40,6 +68,44 @@ const ProductCategories: React.FC = () => {
           </p>
         </div>
         
+        {/* Category Navigation with Icons */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+          <Card className="cursor-pointer hover:border-primary transition-colors">
+            <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+              <Settings className="h-10 w-10 text-primary mb-2" />
+              <h3 className="font-medium">Machined Components</h3>
+            </CardContent>
+          </Card>
+          
+          <Card className="cursor-pointer hover:border-primary transition-colors">
+            <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+              <Hammer className="h-10 w-10 text-primary mb-2" />
+              <h3 className="font-medium">Forged Components</h3>
+            </CardContent>
+          </Card>
+          
+          <Card className="cursor-pointer hover:border-primary transition-colors">
+            <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+              <Car className="h-10 w-10 text-primary mb-2" />
+              <h3 className="font-medium">Automotive Parts</h3>
+            </CardContent>
+          </Card>
+          
+          <Card className="cursor-pointer hover:border-primary transition-colors">
+            <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+              <Wrench className="h-10 w-10 text-primary mb-2" />
+              <h3 className="font-medium">Custom Solutions</h3>
+            </CardContent>
+          </Card>
+          
+          <Card className="cursor-pointer hover:border-primary transition-colors">
+            <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+              <Package className="h-10 w-10 text-primary mb-2" />
+              <h3 className="font-medium">All Products</h3>
+            </CardContent>
+          </Card>
+        </div>
+        
         <Tabs defaultValue="machined" className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="machined">Machined Components</TabsTrigger>
@@ -48,24 +114,30 @@ const ProductCategories: React.FC = () => {
           </TabsList>
           
           <TabsContent value="machined" className="mt-6">
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex items-center justify-center mb-6">
-                  <div className="h-64 w-full max-w-md bg-muted rounded-lg overflow-hidden group cursor-zoom-in">
-                    <img 
-                      src="/images/machined.jpg" 
-                      alt="Machined Components" 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-center">Machined Components</h3>
-                <p className="text-muted-foreground mb-6 text-center">
-                  Precision-engineered components manufactured with tight tolerances and superior finish.
-                </p>
-                <ProductList items={machinedComponents} />
-              </CardContent>
-            </Card>
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-4">Machined Components</h3>
+              <p className="text-muted-foreground mb-6">
+                Precision-engineered components manufactured with tight tolerances and superior finish.
+              </p>
+              
+              {/* Card Grid Layout for Machined Components */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                {machinedComponents.map((item, index) => (
+                  <ProductCard 
+                    key={index}
+                    name={item.name}
+                    description={item.description}
+                    imagePath={item.imagePath}
+                  />
+                ))}
+              </div>
+              
+              <div className="flex justify-center mt-8">
+                <Button variant="outline">
+                  View All Machined Components
+                </Button>
+              </div>
+            </div>
           </TabsContent>
           
           <TabsContent value="forged" className="mt-6">
@@ -85,6 +157,11 @@ const ProductCategories: React.FC = () => {
                   High-strength forged components designed for durability and performance.
                 </p>
                 <ProductList items={forgedComponents} />
+                <div className="flex justify-center mt-8">
+                  <Button variant="outline">
+                    View All Forged Components
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </TabsContent>
@@ -106,6 +183,11 @@ const ProductCategories: React.FC = () => {
                   Specialized automotive components engineered for optimal performance and reliability.
                 </p>
                 <ProductList items={automotiveParts} />
+                <div className="flex justify-center mt-8">
+                  <Button variant="outline">
+                    View All Automotive Parts
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </TabsContent>
