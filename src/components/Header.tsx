@@ -16,6 +16,8 @@ const Header = () => {
           <a href="/" className="text-sm font-medium hover:text-primary transition-colors">Home</a>
           <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">About Us</a>
           <a href="/products" className="text-sm font-medium hover:text-primary transition-colors">Products</a>
+          <a href="/manufacturing" className="text-sm font-medium hover:text-primary transition-colors">Manufacturing</a>
+          <a href="/quality" className="text-sm font-medium hover:text-primary transition-colors">Quality</a>
           <Button variant="outline" size="sm" onClick={() => router.push("/contact")}>
             Contact Us
           </Button>

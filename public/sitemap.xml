@@ -19,6 +19,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.sanewal.com/manufacturing</loc>
+    <lastmod>2023-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.sanewal.com/quality</loc>
+    <lastmod>2023-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.sanewal.com/contact</loc>
     <lastmod>2023-04-17</lastmod>
     <changefreq>monthly</changefreq>
