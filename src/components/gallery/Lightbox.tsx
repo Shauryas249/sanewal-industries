@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from 'lucide-react';
 import { GalleryImage } from './Gallery';
 
@@ -180,12 +181,20 @@ const Lightbox = ({
             </Button>
           </div>
 
-          {/* Caption */}
-          {image.alt && (
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-background/80 text-center">
-              <p className="text-sm">{image.alt}</p>
-            </div>
-          )}
+          {/* Caption and metadata */}
+          <div className="absolute bottom-0 left-0 right-0 p-4 bg-background/80">
+            {image.title && <h3 className="text-lg font-medium">{image.title}</h3>}
+            {image.description && <p className="text-sm mb-2">{image.description}</p>}
+            {image.alt && <p className="text-sm text-muted-foreground">{image.alt}</p>}
+            
+            {image.tags && image.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-2">
+                {image.tags.map(tag => (
+                  <Badge key={tag} variant="secondary">{tag}</Badge>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </DialogContent>
     </Dialog>
