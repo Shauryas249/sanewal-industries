@@ -176,38 +176,39 @@ const Gallery = ({ images, title, description, filterCategories = [] }: GalleryP
                   </div>
                 </div>
               
-              {(image.title || image.description) && (
-                <CardContent className="p-4">
-                  {image.title && (
-                    <h3 className="font-medium text-lg mb-1">{image.title}</h3>
-                  )}
-                  {image.description && (
-                    <p className="text-sm text-muted-foreground">{image.description}</p>
-                  )}
-                </CardContent>
-              )}
-              
-              {image.tags.length > 0 && (
-                <CardFooter className="p-4 pt-0 flex flex-wrap gap-1">
-                  {image.tags.slice(0, 3).map(tag => (
-                    <Badge 
-                      key={`${image.id}-${tag}`} 
-                      variant="secondary"
-                      className="cursor-pointer"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleTag(tag);
-                      }}
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                  {image.tags.length > 3 && (
-                    <Badge variant="outline">+{image.tags.length - 3}</Badge>
-                  )}
-                </CardFooter>
-              )}
-            </Card>
+                {(image.title || image.description) && (
+                  <CardContent className="p-4">
+                    {image.title && (
+                      <h3 className="font-medium text-lg mb-1">{image.title}</h3>
+                    )}
+                    {image.description && (
+                      <p className="text-sm text-muted-foreground">{image.description}</p>
+                    )}
+                  </CardContent>
+                )}
+                
+                {image.tags.length > 0 && (
+                  <CardFooter className="p-4 pt-0 flex flex-wrap gap-1">
+                    {image.tags.slice(0, 3).map(tag => (
+                      <Badge 
+                        key={`${image.id}-${tag}`} 
+                        variant="secondary"
+                        className="cursor-pointer"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleTag(tag);
+                        }}
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                    {image.tags.length > 3 && (
+                      <Badge variant="outline">+{image.tags.length - 3}</Badge>
+                    )}
+                  </CardFooter>
+                )}
+              </Card>
+            </div>
           ))}
         </div>
       )}
