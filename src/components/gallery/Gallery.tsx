@@ -60,9 +60,13 @@ const Gallery = ({ images, title, description, filterCategories = [] }: GalleryP
   
   // Initialize throttled filter function
   useEffect(() => {
-    throttledFilterRef.current = throttle(filterImages, 300);
+    const throttledFilter = throttle(filterImages, 300);
+    throttledFilterRef.current = throttledFilter;
+    
     return () => {
-      throttledFilterRef.current?.cancel?.();
+      if (throttledFilter.cancel) {
+        throttledFilter.cancel();
+      }
     };
   }, [filterImages]);
 
