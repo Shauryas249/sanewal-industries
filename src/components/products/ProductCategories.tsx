@@ -12,34 +12,7 @@ interface ProductItem {
 }
 
 const ProductCategories: React.FC = () => {
-  const machinedComponents: ProductItem[] = [
-    {
-      name: "Adjusting Pin",
-      description: "Precision-engineered pin for accurate adjustments and alignments",
-    },
-    {
-      name: "Banjo Bolt M12",
-      description: "Hollow bolt designed for fluid passage in brake and fuel systems",
-    },
-    {
-      name: "Banjo Bolt M22",
-      description: "Heavy-duty hollow bolt for high-pressure fluid systems",
-    },
-    {
-      name: "Collars",
-      description: "Various collar types including Pinion, Shift, Oil Lock, and Wheel Side",
-    },
-    {
-      name: "Pins",
-      description: "Specialized pins including Gear Shift and Sector variants",
-    },
-    {
-      name: "Custom Machined Parts",
-      description: "Tailored machined components to meet specific requirements",
-    }
-  ];
-
-  const forgedComponents: ProductItem[] = [
+  const fastenersConnectors: ProductItem[] = [
     {
       name: "Stud Hood",
       description: "High-strength stud for hood mounting and secure fastening",
@@ -53,44 +26,20 @@ const ProductCategories: React.FC = () => {
       description: "Specialized nut for steering column assembly and adjustment",
     },
     {
-      name: "Forged Brackets",
-      description: "Durable brackets with superior strength-to-weight ratio",
-    },
-    {
-      name: "Connecting Rods",
-      description: "High-performance connecting rods for engine applications",
-    },
-    {
-      name: "Forged Flanges",
-      description: "Precision flanges for high-pressure and high-temperature systems",
-    }
-  ];
-
-  const automotiveParts: ProductItem[] = [
-    {
-      name: "Rotor Shaft Alternator",
-      description: "Precision-machined shaft for optimal alternator performance",
-    },
-    {
-      name: "Pole Shoe 1.5 HP",
-      description: "Specialized component for electric motor applications",
-    },
-    {
-      name: "De-compression",
-      description: "Engine decompression mechanism for easier starting",
-    },
-    {
       name: "Fork Bolt",
       description: "High-strength bolt for suspension fork assembly",
     },
     {
-      name: "Upper Case",
-      description: "Precision-engineered housing for automotive components",
+      name: "Banjo Bolt M12",
+      description: "Hollow bolt designed for fluid passage in brake and fuel systems",
     },
     {
-      name: "Spline Gear Shaft",
-      description: "Specialized shaft with spline profile for power transmission",
-    },
+      name: "Banjo Bolt M22",
+      description: "Heavy-duty hollow bolt for high-pressure fluid systems",
+    }
+  ];
+
+  const pistonsHydraulic: ProductItem[] = [
     {
       name: "Primary Piston",
       description: "High-performance piston for primary hydraulic systems",
@@ -98,6 +47,82 @@ const ProductCategories: React.FC = () => {
     {
       name: "Rear Piston",
       description: "Specialized piston for rear brake or hydraulic applications",
+    },
+    {
+      name: "De-compression FCU",
+      description: "Engine decompression mechanism for fluid control units",
+    },
+    {
+      name: "Oil Lock Coller K60",
+      description: "Specialized collar for oil sealing in hydraulic systems",
+    },
+    {
+      name: "Oil Lock Coller",
+      description: "Standard oil lock collar for hydraulic applications",
+    }
+  ];
+
+  const shaftsRotational: ProductItem[] = [
+    {
+      name: "Spline Gear Shaft",
+      description: "Specialized shaft with spline profile for power transmission",
+    },
+    {
+      name: "Pin Sector 10x64",
+      description: "Precision pin for sector gear applications",
+    },
+    {
+      name: "Rotor Shaft Alternator",
+      description: "Precision-machined shaft for optimal alternator performance",
+    },
+    {
+      name: "Pin Gear Shift 28G20",
+      description: "Specialized pin for gear shift mechanisms",
+    }
+  ];
+
+  const bushingsCollars: ProductItem[] = [
+    {
+      name: "Bush Pinion",
+      description: "Specialized bushing for pinion gear applications",
+    },
+    {
+      name: "Coller 9MM",
+      description: "Standard 9mm collar for various applications",
+    },
+    {
+      name: "Coller Shift",
+      description: "Specialized collar for shift mechanisms",
+    },
+    {
+      name: "Coller Wheel Side",
+      description: "Wheel-side collar for automotive applications",
+    }
+  ];
+
+  const adaptersConnectors: ProductItem[] = [
+    {
+      name: "Upper Case",
+      description: "Precision-engineered housing for automotive components",
+    },
+    {
+      name: "Inner Pole",
+      description: "Specialized connector for electrical components",
+    },
+    {
+      name: "Plug",
+      description: "Sealing plug for fluid systems",
+    },
+    {
+      name: "Adjecting Pin",
+      description: "Precision-engineered pin for accurate adjustments and alignments",
+    }
+  ];
+
+  const precisionMachined: ProductItem[] = [
+    {
+      name: "Pole Shoe 1.5 HP",
+      description: "Specialized component for electric motor applications",
     }
   ];
 
@@ -113,75 +138,88 @@ const ProductCategories: React.FC = () => {
         </div>
         
         {/* Category Navigation with Icons */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
           <Card 
             className="cursor-pointer hover:border-primary transition-colors" 
-            onClick={() => window.location.href = "/products/machined-components"}
-          >
-            <CardContent className="p-4 flex flex-col items-center justify-center text-center">
-              <Settings className="h-10 w-10 text-primary mb-2" />
-              <h3 className="font-medium">Machined Components</h3>
-            </CardContent>
-          </Card>
-          
-          <Card 
-            className="cursor-pointer hover:border-primary transition-colors"
-            onClick={() => window.location.href = "/products/forged-components"}
+            onClick={() => window.location.href = "/products/fasteners-connectors"}
           >
             <CardContent className="p-4 flex flex-col items-center justify-center text-center">
               <Hammer className="h-10 w-10 text-primary mb-2" />
-              <h3 className="font-medium">Forged Components</h3>
+              <h3 className="font-medium">Fasteners & Connectors</h3>
             </CardContent>
           </Card>
           
           <Card 
             className="cursor-pointer hover:border-primary transition-colors"
-            onClick={() => window.location.href = "/products/automotive-parts"}
+            onClick={() => window.location.href = "/products/pistons-hydraulic-components"}
           >
             <CardContent className="p-4 flex flex-col items-center justify-center text-center">
               <Car className="h-10 w-10 text-primary mb-2" />
-              <h3 className="font-medium">Automotive Parts</h3>
+              <h3 className="font-medium">Pistons & Hydraulic</h3>
             </CardContent>
           </Card>
           
           <Card 
             className="cursor-pointer hover:border-primary transition-colors"
-            onClick={() => window.location.href = "/products/custom-solutions"}
+            onClick={() => window.location.href = "/products/shafts-rotational-components"}
+          >
+            <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+              <Settings className="h-10 w-10 text-primary mb-2" />
+              <h3 className="font-medium">Shafts & Rotational</h3>
+            </CardContent>
+          </Card>
+          
+          <Card 
+            className="cursor-pointer hover:border-primary transition-colors"
+            onClick={() => window.location.href = "/products/bushings-collars"}
           >
             <CardContent className="p-4 flex flex-col items-center justify-center text-center">
               <Wrench className="h-10 w-10 text-primary mb-2" />
-              <h3 className="font-medium">Custom Solutions</h3>
+              <h3 className="font-medium">Bushings & Collars</h3>
             </CardContent>
           </Card>
           
           <Card 
             className="cursor-pointer hover:border-primary transition-colors"
-            onClick={() => window.location.href = "/products"}
+            onClick={() => window.location.href = "/products/adapters-connectors"}
           >
             <CardContent className="p-4 flex flex-col items-center justify-center text-center">
-              <Package className="h-10 w-10 text-primary mb-2" />
-              <h3 className="font-medium">All Products</h3>
+              <Car className="h-10 w-10 text-primary mb-2" />
+              <h3 className="font-medium">Adapters & Connectors</h3>
+            </CardContent>
+          </Card>
+          
+          <Card 
+            className="cursor-pointer hover:border-primary transition-colors"
+            onClick={() => window.location.href = "/products/precision-machined-parts"}
+          >
+            <CardContent className="p-4 flex flex-col items-center justify-center text-center">
+              <Settings className="h-10 w-10 text-primary mb-2" />
+              <h3 className="font-medium">Precision Machined</h3>
             </CardContent>
           </Card>
         </div>
         
-        <Tabs defaultValue="machined" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="machined" onClick={() => window.location.href = "/products/machined-components"}>Machined Components</TabsTrigger>
-            <TabsTrigger value="forged" onClick={() => window.location.href = "/products/forged-components"}>Forged Components</TabsTrigger>
-            <TabsTrigger value="automotive" onClick={() => window.location.href = "/products/automotive-parts"}>Automotive Parts</TabsTrigger>
+        <Tabs defaultValue="fasteners" className="w-full">
+          <TabsList className="grid w-full grid-cols-6 mb-8">
+            <TabsTrigger value="fasteners" onClick={() => window.location.href = "/products/fasteners-connectors"}>Fasteners</TabsTrigger>
+            <TabsTrigger value="pistons" onClick={() => window.location.href = "/products/pistons-hydraulic-components"}>Pistons</TabsTrigger>
+            <TabsTrigger value="shafts" onClick={() => window.location.href = "/products/shafts-rotational-components"}>Shafts</TabsTrigger>
+            <TabsTrigger value="bushings" onClick={() => window.location.href = "/products/bushings-collars"}>Bushings</TabsTrigger>
+            <TabsTrigger value="adapters" onClick={() => window.location.href = "/products/adapters-connectors"}>Adapters</TabsTrigger>
+            <TabsTrigger value="precision" onClick={() => window.location.href = "/products/precision-machined-parts"}>Precision</TabsTrigger>
           </TabsList>
           
-          <TabsContent value="machined" className="mt-6">
+          <TabsContent value="fasteners" className="mt-6">
             <div className="mb-6">
-              <h3 className="text-2xl font-semibold mb-4">Machined Components</h3>
+              <h3 className="text-2xl font-semibold mb-4">Fasteners & Connectors</h3>
               <p className="text-muted-foreground mb-6">
-                Precision-engineered components manufactured with tight tolerances and superior finish.
+                Essential fastening components designed for secure connections in automotive applications.
               </p>
               
-              {/* Card Grid Layout for Machined Components */}
+              {/* Card Grid Layout for Fasteners & Connectors */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                {machinedComponents.map((item, index) => (
+                {fastenersConnectors.map((item, index) => (
                   <ProductCard 
                     key={index}
                     name={item.name}
@@ -192,23 +230,23 @@ const ProductCategories: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-8">
-                <Button variant="outline" onClick={() => window.location.href = "/products/machined-components"}>
-                  View All Machined Components
+                <Button variant="outline" onClick={() => window.location.href = "/products/fasteners-connectors"}>
+                  View All Fasteners & Connectors
                 </Button>
               </div>
             </div>
           </TabsContent>
           
-          <TabsContent value="forged" className="mt-6">
+          <TabsContent value="pistons" className="mt-6">
             <div className="mb-6">
-              <h3 className="text-2xl font-semibold mb-4">Forged Components</h3>
+              <h3 className="text-2xl font-semibold mb-4">Pistons & Hydraulic Components</h3>
               <p className="text-muted-foreground mb-6">
-                High-strength forged components designed for durability and performance.
+                Precision-engineered pistons and hydraulic parts for optimal fluid control and pressure management.
               </p>
               
-              {/* Card Grid Layout for Forged Components */}
+              {/* Card Grid Layout for Pistons & Hydraulic Components */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                {forgedComponents.map((item, index) => (
+                {pistonsHydraulic.map((item, index) => (
                   <ProductCard 
                     key={index}
                     name={item.name}
@@ -219,23 +257,23 @@ const ProductCategories: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-8">
-                <Button variant="outline" onClick={() => window.location.href = "/products/forged-components"}>
-                  View All Forged Components
+                <Button variant="outline" onClick={() => window.location.href = "/products/pistons-hydraulic-components"}>
+                  View All Pistons & Hydraulic Components
                 </Button>
               </div>
             </div>
           </TabsContent>
           
-          <TabsContent value="automotive" className="mt-6">
+          <TabsContent value="shafts" className="mt-6">
             <div className="mb-6">
-              <h3 className="text-2xl font-semibold mb-4">Automotive Parts</h3>
+              <h3 className="text-2xl font-semibold mb-4">Shafts & Rotational Components</h3>
               <p className="text-muted-foreground mb-6">
-                Specialized automotive components engineered for optimal performance and reliability.
+                High-strength rotational components manufactured to ensure reliable power transmission.
               </p>
               
-              {/* Card Grid Layout for Automotive Parts */}
+              {/* Card Grid Layout for Shafts & Rotational Components */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                {automotiveParts.map((item, index) => (
+                {shaftsRotational.map((item, index) => (
                   <ProductCard 
                     key={index}
                     name={item.name}
@@ -246,8 +284,89 @@ const ProductCategories: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-8">
-                <Button variant="outline" onClick={() => window.location.href = "/products/automotive-parts"}>
-                  View All Automotive Parts
+                <Button variant="outline" onClick={() => window.location.href = "/products/shafts-rotational-components"}>
+                  View All Shafts & Rotational Components
+                </Button>
+              </div>
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="bushings" className="mt-6">
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-4">Bushings & Collars</h3>
+              <p className="text-muted-foreground mb-6">
+                Durable bushings and collars designed for reduced friction and extended component life.
+              </p>
+              
+              {/* Card Grid Layout for Bushings & Collars */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                {bushingsCollars.map((item, index) => (
+                  <ProductCard 
+                    key={index}
+                    name={item.name}
+                    description={item.description}
+                    imagePath={item.imagePath}
+                  />
+                ))}
+              </div>
+              
+              <div className="flex justify-center mt-8">
+                <Button variant="outline" onClick={() => window.location.href = "/products/bushings-collars"}>
+                  View All Bushings & Collars
+                </Button>
+              </div>
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="adapters" className="mt-6">
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-4">Adapters & Connectors</h3>
+              <p className="text-muted-foreground mb-6">
+                Specialized connectors that ensure proper integration between various automotive systems.
+              </p>
+              
+              {/* Card Grid Layout for Adapters & Connectors */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                {adaptersConnectors.map((item, index) => (
+                  <ProductCard 
+                    key={index}
+                    name={item.name}
+                    description={item.description}
+                    imagePath={item.imagePath}
+                  />
+                ))}
+              </div>
+              
+              <div className="flex justify-center mt-8">
+                <Button variant="outline" onClick={() => window.location.href = "/products/adapters-connectors"}>
+                  View All Adapters & Connectors
+                </Button>
+              </div>
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="precision" className="mt-6">
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-4">Precision Machined Parts</h3>
+              <p className="text-muted-foreground mb-6">
+                Custom machined components manufactured with tight tolerances and superior finish.
+              </p>
+              
+              {/* Card Grid Layout for Precision Machined Parts */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                {precisionMachined.map((item, index) => (
+                  <ProductCard 
+                    key={index}
+                    name={item.name}
+                    description={item.description}
+                    imagePath={item.imagePath}
+                  />
+                ))}
+              </div>
+              
+              <div className="flex justify-center mt-8">
+                <Button variant="outline" onClick={() => window.location.href = "/products/precision-machined-parts"}>
+                  View All Precision Machined Parts
                 </Button>
               </div>
             </div>

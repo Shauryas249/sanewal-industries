@@ -20,10 +20,12 @@ const Header = () => {
   };
 
   const productCategories = [
-    { name: "Machined Components", path: "/products/machined-components" },
-    { name: "Forged Components", path: "/products/forged-components" },
-    { name: "Automotive Parts", path: "/products/automotive-parts" },
-    { name: "Custom Solutions", path: "/products/custom-solutions" },
+    { name: "Fasteners & Connectors", path: "/products/fasteners-connectors" },
+    { name: "Pistons & Hydraulic Components", path: "/products/pistons-hydraulic-components" },
+    { name: "Shafts & Rotational Components", path: "/products/shafts-rotational-components" },
+    { name: "Bushings & Collars", path: "/products/bushings-collars" },
+    { name: "Adapters & Connectors", path: "/products/adapters-connectors" },
+    { name: "Precision Machined Parts", path: "/products/precision-machined-parts" },
   ];
 
   return (

@@ -6,27 +6,39 @@ const Products: React.FC = () => {
   const productCategories = [
     {
       id: 1,
-      title: 'Machined Components',
-      image: '/images/machined.jpg',
-      description: 'Precision-engineered components including Adjusting Pins, Banjo Bolts, Collars, and more.',
+      title: 'Fasteners & Connectors',
+      image: '/images/forged.jpg',
+      description: 'Essential fastening components designed for secure connections in automotive applications.',
     },
     {
       id: 2,
-      title: 'Forged Components',
-      image: '/images/forged.jpg',
-      description: 'High-strength forged components including Studs, Bolts, Nuts, and Locks.',
+      title: 'Pistons & Hydraulic Components',
+      image: '/images/automotive.jpg',
+      description: 'Precision-engineered pistons and hydraulic parts for optimal fluid control and pressure management.',
     },
     {
       id: 3,
-      title: 'Automotive Parts',
-      image: '/images/automotive.jpg',
-      description: 'Specialized automotive components including Rotor Shaft Alternator, Pole Shoe, and Steering Components.',
+      title: 'Shafts & Rotational Components',
+      image: '/images/machined.jpg',
+      description: 'High-strength rotational components manufactured to ensure reliable power transmission.',
     },
     {
       id: 4,
-      title: 'Custom Solutions',
+      title: 'Bushings & Collars',
       image: '/images/custom.jpg',
-      description: 'Tailored manufacturing solutions to meet your specific requirements and specifications.',
+      description: 'Durable bushings and collars designed for reduced friction and extended component life.',
+    },
+    {
+      id: 5,
+      title: 'Adapters & Connectors',
+      image: '/images/automotive.jpg',
+      description: 'Specialized connectors that ensure proper integration between various automotive systems.',
+    },
+    {
+      id: 6,
+      title: 'Precision Machined Parts',
+      image: '/images/machined.jpg',
+      description: 'Custom machined components manufactured with tight tolerances and superior finish.',
     },
   ];
 
