@@ -50,7 +50,12 @@ const Products: React.FC = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{category.title}</h3>
                 <p className="text-muted-foreground mb-4">{category.description}</p>
-                <Button variant="outline" size="sm" className="w-full">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => window.location.href = `/products/${category.title.toLowerCase().replace(/ /g, '-')}`}
+                >
                   Learn More
                 </Button>
               </CardContent>
@@ -59,7 +64,7 @@ const Products: React.FC = () => {
         </div>
         
         <div className="text-center mt-10">
-          <Button variant="default" size="lg">
+          <Button variant="default" size="lg" onClick={() => window.location.href = "/products"}>
             View All Products
           </Button>
         </div>

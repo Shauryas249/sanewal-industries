@@ -20,9 +20,10 @@ const Header = () => {
   };
 
   const productCategories = [
-    { name: "Machined Components", path: "/products?category=machined" },
-    { name: "Forged Components", path: "/products?category=forged" },
-    { name: "Automotive Parts", path: "/products?category=automotive" },
+    { name: "Machined Components", path: "/products/machined-components" },
+    { name: "Forged Components", path: "/products/forged-components" },
+    { name: "Automotive Parts", path: "/products/automotive-parts" },
+    { name: "Custom Solutions", path: "/products/custom-solutions" },
   ];
 
   return (

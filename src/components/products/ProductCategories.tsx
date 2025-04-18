@@ -114,35 +114,50 @@ const ProductCategories: React.FC = () => {
         
         {/* Category Navigation with Icons */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
-          <Card className="cursor-pointer hover:border-primary transition-colors">
+          <Card 
+            className="cursor-pointer hover:border-primary transition-colors" 
+            onClick={() => window.location.href = "/products/machined-components"}
+          >
             <CardContent className="p-4 flex flex-col items-center justify-center text-center">
               <Settings className="h-10 w-10 text-primary mb-2" />
               <h3 className="font-medium">Machined Components</h3>
             </CardContent>
           </Card>
           
-          <Card className="cursor-pointer hover:border-primary transition-colors">
+          <Card 
+            className="cursor-pointer hover:border-primary transition-colors"
+            onClick={() => window.location.href = "/products/forged-components"}
+          >
             <CardContent className="p-4 flex flex-col items-center justify-center text-center">
               <Hammer className="h-10 w-10 text-primary mb-2" />
               <h3 className="font-medium">Forged Components</h3>
             </CardContent>
           </Card>
           
-          <Card className="cursor-pointer hover:border-primary transition-colors">
+          <Card 
+            className="cursor-pointer hover:border-primary transition-colors"
+            onClick={() => window.location.href = "/products/automotive-parts"}
+          >
             <CardContent className="p-4 flex flex-col items-center justify-center text-center">
               <Car className="h-10 w-10 text-primary mb-2" />
               <h3 className="font-medium">Automotive Parts</h3>
             </CardContent>
           </Card>
           
-          <Card className="cursor-pointer hover:border-primary transition-colors">
+          <Card 
+            className="cursor-pointer hover:border-primary transition-colors"
+            onClick={() => window.location.href = "/products/custom-solutions"}
+          >
             <CardContent className="p-4 flex flex-col items-center justify-center text-center">
               <Wrench className="h-10 w-10 text-primary mb-2" />
               <h3 className="font-medium">Custom Solutions</h3>
             </CardContent>
           </Card>
           
-          <Card className="cursor-pointer hover:border-primary transition-colors">
+          <Card 
+            className="cursor-pointer hover:border-primary transition-colors"
+            onClick={() => window.location.href = "/products"}
+          >
             <CardContent className="p-4 flex flex-col items-center justify-center text-center">
               <Package className="h-10 w-10 text-primary mb-2" />
               <h3 className="font-medium">All Products</h3>
@@ -152,9 +167,9 @@ const ProductCategories: React.FC = () => {
         
         <Tabs defaultValue="machined" className="w-full">
           <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="machined">Machined Components</TabsTrigger>
-            <TabsTrigger value="forged">Forged Components</TabsTrigger>
-            <TabsTrigger value="automotive">Automotive Parts</TabsTrigger>
+            <TabsTrigger value="machined" onClick={() => window.location.href = "/products/machined-components"}>Machined Components</TabsTrigger>
+            <TabsTrigger value="forged" onClick={() => window.location.href = "/products/forged-components"}>Forged Components</TabsTrigger>
+            <TabsTrigger value="automotive" onClick={() => window.location.href = "/products/automotive-parts"}>Automotive Parts</TabsTrigger>
           </TabsList>
           
           <TabsContent value="machined" className="mt-6">
@@ -177,7 +192,7 @@ const ProductCategories: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-8">
-                <Button variant="outline">
+                <Button variant="outline" onClick={() => window.location.href = "/products/machined-components"}>
                   View All Machined Components
                 </Button>
               </div>
@@ -204,7 +219,7 @@ const ProductCategories: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-8">
-                <Button variant="outline">
+                <Button variant="outline" onClick={() => window.location.href = "/products/forged-components"}>
                   View All Forged Components
                 </Button>
               </div>
@@ -231,7 +246,7 @@ const ProductCategories: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-8">
-                <Button variant="outline">
+                <Button variant="outline" onClick={() => window.location.href = "/products/automotive-parts"}>
                   View All Automotive Parts
                 </Button>
               </div>
