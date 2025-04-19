@@ -66,7 +66,7 @@ const Products: React.FC = () => {
                   variant="outline" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.location.href = `/products/${category.title.toLowerCase().replace(/ /g, '-')}`}
+                  onClick={() => window.location.href = `/products/${category.title.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`}
                 >
                   Learn More
                 </Button>
