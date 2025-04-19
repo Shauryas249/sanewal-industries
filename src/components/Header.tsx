@@ -2,18 +2,20 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Logo from './Logo';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Menu, ChevronDown, ChevronRight, ChevronDown as ChevronDownIcon } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const Header = () => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   const isActive = (path: string) => {
     return router.pathname === path ? "text-primary font-semibold" : "hover:text-primary transition-colors";
@@ -69,99 +71,119 @@ const Header = () => {
         </nav>
         
         {/* Mobile Navigation */}
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <Sheet open={isOpen} onOpenChange={(open) => {
+          setIsOpen(open);
+          if (!open) {
+            // Reset products dropdown when menu closes
+            setIsProductsOpen(false);
+          }
+        }}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="sm" onClick={() => setIsOpen(true)}>
+            <Button variant="ghost" size="sm" aria-label="Open menu">
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] p-0">
             <div className="flex flex-col h-full">
-              <div className="flex justify-between items-center py-4 border-b">
+              <div className="flex justify-between items-center p-6 border-b">
                 <Logo />
-                <Button variant="ghost" size="sm" onClick={() => setIsOpen(false)}>
-                  <X className="h-6 w-6" />
-                </Button>
+                {/* No need for a second close button, SheetContent already has one */}
               </div>
               
-              <nav className="flex flex-col space-y-4 mt-8">
-                <a 
-                  href="/" 
-                  className={`flex items-center py-2 px-4 rounded-md ${isActive('/') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Home
-                </a>
-                <a 
-                  href="/about" 
-                  className={`flex items-center py-2 px-4 rounded-md ${isActive('/about') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  About Us
-                </a>
-                
-                {/* Mobile Products Dropdown */}
-                <div className="flex flex-col">
+              <ScrollArea className="flex-1 h-[calc(100vh-140px)]">
+                <nav className="flex flex-col space-y-1 p-6">
                   <a 
-                    href="/products" 
-                    className={`flex items-center justify-between py-2 px-4 rounded-md ${isActive('/products') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
+                    href="/" 
+                    className={`flex items-center py-2 px-4 rounded-md ${isActive('/') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
                     onClick={() => setIsOpen(false)}
                   >
-                    <span>Products</span>
-                    <ChevronRight className="h-4 w-4" />
+                    Home
                   </a>
-                  <div className="ml-4 mt-2 border-l pl-4 space-y-2">
-                    {productCategories.map((category, index) => (
-                      <a 
-                        key={index} 
-                        href={category.path} 
-                        className="flex items-center py-2 px-4 rounded-md hover:bg-muted"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {category.name}
-                      </a>
-                    ))}
+                  <a 
+                    href="/about" 
+                    className={`flex items-center py-2 px-4 rounded-md ${isActive('/about') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    About Us
+                  </a>
+                  
+                  {/* Mobile Products Dropdown - Collapsible */}
+                  <div className="flex flex-col">
+                    <button 
+                      className={`flex items-center justify-between py-2 px-4 rounded-md text-left ${isActive('/products') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsProductsOpen(!isProductsOpen);
+                      }}
+                      aria-expanded={isProductsOpen}
+                      aria-controls="products-menu"
+                    >
+                      <span>Products</span>
+                      <ChevronDownIcon className={`h-4 w-4 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    
+                    {isProductsOpen && (
+                      <div id="products-menu" className="ml-4 mt-1 border-l pl-4 space-y-1">
+                        <a 
+                          href="/products" 
+                          className="flex items-center py-2 px-4 rounded-md hover:bg-muted"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          All Products
+                        </a>
+                        {productCategories.map((category, index) => (
+                          <a 
+                            key={index} 
+                            href={category.path} 
+                            className="flex items-center py-2 px-4 rounded-md hover:bg-muted"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {category.name}
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                </div>
-                
-                <a 
-                  href="/manufacturing" 
-                  className={`flex items-center py-2 px-4 rounded-md ${isActive('/manufacturing') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Manufacturing
-                </a>
-                <a 
-                  href="/quality" 
-                  className={`flex items-center py-2 px-4 rounded-md ${isActive('/quality') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Quality
-                </a>
-                <a 
-                  href="/gallery" 
-                  className={`flex items-center py-2 px-4 rounded-md ${isActive('/gallery') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Gallery
-                </a>
-                <a 
-                  href="/data" 
-                  className={`flex items-center py-2 px-4 rounded-md ${isActive('/data') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Data
-                </a>
-                <a 
-                  href="/ethics-compliance" 
-                  className={`flex items-center py-2 px-4 rounded-md ${isActive('/ethics-compliance') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Ethics & Compliance
-                </a>
-              </nav>
+                  
+                  <a 
+                    href="/manufacturing" 
+                    className={`flex items-center py-2 px-4 rounded-md ${isActive('/manufacturing') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Manufacturing
+                  </a>
+                  <a 
+                    href="/quality" 
+                    className={`flex items-center py-2 px-4 rounded-md ${isActive('/quality') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Quality
+                  </a>
+                  <a 
+                    href="/gallery" 
+                    className={`flex items-center py-2 px-4 rounded-md ${isActive('/gallery') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Gallery
+                  </a>
+                  <a 
+                    href="/data" 
+                    className={`flex items-center py-2 px-4 rounded-md ${isActive('/data') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Data
+                  </a>
+                  <a 
+                    href="/ethics-compliance" 
+                    className={`flex items-center py-2 px-4 rounded-md ${isActive('/ethics-compliance') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Ethics & Compliance
+                  </a>
+                </nav>
+              </ScrollArea>
               
-              <div className="mt-auto pb-8">
+              <div className="p-6 border-t">
                 <Button 
                   className="w-full" 
                   onClick={() => {
