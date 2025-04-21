@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import Container from '@/components/ui/container';
 import { 
   Award, 
   Calendar, 
@@ -68,7 +69,7 @@ const AboutUs: React.FC = () => {
 
   return (
     <section className="py-16">
-      <div className="container">
+      <Container>
         {/* Main Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">About Sanewal Industries</h1>

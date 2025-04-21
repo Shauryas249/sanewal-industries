@@ -6,6 +6,7 @@ import QualityPolicy from "@/components/quality/QualityPolicy";
 import Certifications from "@/components/quality/Certifications";
 import QualityAssurance from "@/components/quality/QualityAssurance";
 import TestingEquipment from "@/components/quality/TestingEquipment";
+import Container from "@/components/ui/container";
 
 export default function Quality() {
   return (
@@ -20,12 +21,12 @@ export default function Quality() {
         <Header />
         <main className="flex-1">
           <div className="bg-primary/10 py-16">
-            <div className="container">
+            <Container>
               <h1 className="text-4xl md:text-5xl font-bold text-center">Quality Management</h1>
               <p className="text-xl text-muted-foreground text-center mt-4 max-w-3xl mx-auto">
                 Our commitment to quality is reflected in our certifications, processes, and state-of-the-art testing equipment.
               </p>
-            </div>
+            </Container>
           </div>
           <QualityPolicy />
           <Certifications />

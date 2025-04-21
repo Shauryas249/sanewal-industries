@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ProductCategories from "@/components/products/ProductCategories";
 import TestingEquipment from "@/components/products/TestingEquipment";
 import CoreValues from "@/components/products/CoreValues";
+import Container from "@/components/ui/container";
 
 export default function Products() {
   return (
@@ -19,7 +20,7 @@ export default function Products() {
         <Header />
         <main className="flex-1">
           <div className="bg-primary/10 py-16">
-            <div className="container">
+            <Container>
               <h1 className="text-4xl md:text-5xl font-bold text-center">Our Products</h1>
               <p className="text-xl text-muted-foreground text-center mt-4 max-w-3xl mx-auto">
                 M/s Sanewal Auto Engineers Private Ltd is an IATF 16949:2016 & ISO 14001:2015 Certified company engaged in the manufacturing of Machined/Forged Components & Supplying these to Leading automotive Companies in INDIA & around the World for the last 40 yrs.
@@ -35,16 +36,16 @@ export default function Products() {
                   <span className="font-medium">40+ Years Experience</span>
                 </div>
               </div>
-            </div>
+            </Container>
           </div>
           
-          <div className="container py-12">
+          <Container className="py-12">
             <div className="bg-muted/30 p-6 rounded-lg border">
               <p className="text-lg">
                 We are committed to customer's satisfaction through Continual improvement in Quality & Production. Our prime objective will always be to achieve Important Factors like -- <span className="font-semibold">Cost, Quality, On Time Delivery</span> -- In the interest of our Customers in order to serve in the best way.
               </p>
             </div>
-          </div>
+          </Container>
           
           <ProductCategories />
           <CoreValues />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+import Container from '@/components/ui/container';
 
 const TestingEquipment: React.FC = () => {
   // Empty equipment list since we're displaying all items with images now
@@ -98,7 +99,7 @@ const TestingEquipment: React.FC = () => {
 
   return (
     <section className="py-16 bg-muted/30">
-      <div className="container">
+      <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Quality Testing Equipment</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -213,7 +214,7 @@ const TestingEquipment: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

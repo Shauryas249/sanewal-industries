@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import Container from '@/components/ui/container';
 
 const QualityAssurance: React.FC = () => {
   const methods = [
@@ -83,7 +84,7 @@ const QualityAssurance: React.FC = () => {
 
   return (
     <section className="py-16 bg-background">
-      <div className="container">
+      <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Quality Assurance Methods</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -107,7 +108,7 @@ const QualityAssurance: React.FC = () => {
             </Card>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
