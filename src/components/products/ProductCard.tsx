@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import Image from 'next/image';
 
 interface ProductCardProps {
   name: string;
@@ -10,13 +11,16 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ name, description, imagePath }) => {
   return (
     <Card className="overflow-hidden transition-all hover:shadow-md">
-      <div className="h-48 bg-gray-100 flex items-center justify-center">
+      <div className="h-48 bg-gray-100 flex items-center justify-center relative">
         {imagePath ? (
-          <img 
-            src={imagePath} 
-            alt={name} 
-            className="w-full h-full object-cover"
-          />
+          <div className="relative w-full h-full">
+            <img 
+              src={imagePath} 
+              alt={`${name} - Automotive fastener component by Sanewal Auto Engineers`}
+              className="w-full h-full object-contain p-2"
+              loading="lazy"
+            />
+          </div>
         ) : (
           <div className="w-full h-full bg-gray-100 flex items-center justify-center">
             <span className="text-gray-400">[Product Image]</span>
