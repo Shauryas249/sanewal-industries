@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Image from 'next/image';
 
 const TestingEquipment: React.FC = () => {
   const equipmentCategories = [
@@ -8,9 +9,27 @@ const TestingEquipment: React.FC = () => {
       id: 'measurement',
       name: 'Measurement Tools',
       equipment: [
-        { id: 1, name: 'Micrometers', description: 'Precision measurement tools for accurate dimensional analysis' },
-        { id: 2, name: 'Vernier Calipers', description: 'For measuring internal and external dimensions with high precision' },
-        { id: 3, name: 'Height Gauge', description: 'For precise height measurements and scribing operations' },
+        { 
+          id: 1, 
+          name: 'Micrometers', 
+          description: 'Precision measurement tools for accurate dimensional analysis',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/micrometer-c7aaee1.jpg',
+          alt: 'Micrometers - Precision measurement tools for dimensional analysis'
+        },
+        { 
+          id: 2, 
+          name: 'Vernier Calipers', 
+          description: 'For measuring internal and external dimensions with high precision',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/vernier-caliper-6fabfeb.jpg',
+          alt: 'Vernier Calipers - High precision measuring tool for internal and external dimensions'
+        },
+        { 
+          id: 3, 
+          name: 'Height Gauge', 
+          description: 'For precise height measurements and scribing operations',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/height-gauge-4837fac.jpg',
+          alt: 'Height Gauge - Precision tool for height measurements and scribing operations'
+        },
       ],
     },
     {
@@ -68,8 +87,18 @@ const TestingEquipment: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.equipment.map((item) => (
                   <Card key={item.id} className="overflow-hidden">
-                    <div className="h-48 bg-muted flex items-center justify-center">
-                      <span className="text-muted-foreground">[{item.name} Image]</span>
+                    <div className="h-48 bg-muted flex items-center justify-center relative overflow-hidden">
+                      {category.id === 'measurement' && item.image ? (
+                        <Image 
+                          src={item.image}
+                          alt={item.alt || `${item.name} - ${item.description}`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover"
+                        />
+                      ) : (
+                        <span className="text-muted-foreground">[{item.name} Image]</span>
+                      )}
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-lg font-semibold mb-2">{item.name}</h3>

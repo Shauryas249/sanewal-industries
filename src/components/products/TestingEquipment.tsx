@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import Image from 'next/image';
 
 const TestingEquipment: React.FC = () => {
   const equipmentList = [
@@ -11,8 +12,28 @@ const TestingEquipment: React.FC = () => {
     "Metallurgical Microscope (Truemet)",
     "Trinocular Stereozoom Microscope (Truemet)",
     "Coating Thickness Testers",
-    "Measurement Tools (Micrometers, Vernier Calipers, Height Gauge)",
     "Specialized Equipment (Laser Marking Machine, Leakage Testing Machine)"
+  ];
+
+  const measurementTools = [
+    {
+      name: "Micrometers",
+      description: "Precision measurement tools for accurate dimensional analysis",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/micrometer-c7aaee1.jpg",
+      alt: "Micrometers - Precision measurement tools for dimensional analysis"
+    },
+    {
+      name: "Vernier Calipers",
+      description: "For measuring internal and external dimensions with high precision",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/vernier-caliper-6fabfeb.jpg",
+      alt: "Vernier Calipers - High precision measuring tool for internal and external dimensions"
+    },
+    {
+      name: "Height Gauge",
+      description: "For precise height measurements and scribing operations",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/height-gauge-4837fac.jpg",
+      alt: "Height Gauge - Precision tool for height measurements and scribing operations"
+    }
   ];
 
   return (
@@ -40,6 +61,29 @@ const TestingEquipment: React.FC = () => {
             </div>
           </CardContent>
         </Card>
+
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold mb-6 text-center">Measurement Tools</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {measurementTools.map((tool, index) => (
+              <Card key={index} className="overflow-hidden">
+                <div className="h-48 bg-muted relative overflow-hidden">
+                  <Image 
+                    src={tool.image}
+                    alt={tool.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h4 className="text-lg font-semibold mb-2">{tool.name}</h4>
+                  <p className="text-muted-foreground text-sm">{tool.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
