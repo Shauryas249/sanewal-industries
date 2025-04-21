@@ -17,7 +17,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, description, imagePath 
             <img 
               src={imagePath} 
               alt={`${name} - Automotive fastener component by Sanewal Auto Engineers`}
-              className="w-full h-full object-contain p-2"
+              className="w-full h-full object-cover"
               loading="lazy"
             />
           </div>
