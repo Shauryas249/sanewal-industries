@@ -1,45 +1,81 @@
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Container from './ui/container';
+import ProductCarousel from './products/ProductCarousel';
 
 const Products: React.FC = () => {
+  // Product categories with their descriptions and slugs
   const productCategories = [
     {
       id: 1,
       title: 'Fasteners & Connectors',
-      image: '/images/forged.jpg',
       description: 'Essential fastening components designed for secure connections in automotive applications.',
+      slug: 'fasteners-connectors',
+      products: [
+        { name: 'Stud Hood', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/stud-hood-addf197.jpg' },
+        { name: 'Lock Nut', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/lock-nut-63b57c6.jpg' },
+        { name: 'Steering Head Nut', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/steering-head-nut-0f81599.jpg' },
+        { name: 'Fork Bolt', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/fork-bolt-cfbf3a0.jpg' },
+        { name: 'Banjo Bolt M12', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/banjo-bolt-m12-fe403f2.jpg' }
+      ]
     },
     {
       id: 2,
       title: 'Pistons & Hydraulic Components',
-      image: '/images/automotive.jpg',
       description: 'Precision-engineered pistons and hydraulic parts for optimal fluid control and pressure management.',
+      slug: 'pistons-hydraulic-components',
+      products: [
+        { name: 'Primary Piston', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/primary-piston-8615fa2.jpg' },
+        { name: 'Rear Piston', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rear-piston-094b9f4.jpg' },
+        { name: 'De-compression FCU', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/de-compression-fcu-42751cb.jpg' },
+        { name: 'Oil Lock Coller K60', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/oil-lock-coller-k60-ec0efa4.jpg' },
+        { name: 'Oil Lock Coller', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/oil-lock-coller-dee7174.jpg' }
+      ]
     },
     {
       id: 3,
       title: 'Shafts & Rotational Components',
-      image: '/images/machined.jpg',
       description: 'High-strength rotational components manufactured to ensure reliable power transmission.',
+      slug: 'shafts-rotational-components',
+      products: [
+        { name: 'Spline Gear Shaft', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/spline-gear-shaft-c36056e.jpg' },
+        { name: 'Pin Sector 10x64', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/pin-sector-10x64-d67bd4c.jpg' },
+        { name: 'Rotor Shaft Alternator', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rotor-shaft-alternator-ac35dfb.jpg' },
+        { name: 'Pin Gear Shift 28G20', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/pin-gear-shift-28g20-3a852dc.jpg' }
+      ]
     },
     {
       id: 4,
       title: 'Bushings & Collars',
-      image: '/images/custom.jpg',
       description: 'Durable bushings and collars designed for reduced friction and extended component life.',
+      slug: 'bushings-collars',
+      products: [
+        { name: 'Bush Pinion', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/bush-pinion-3c875dc.jpg' },
+        { name: 'Coller 9MM', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coller-c5314e2.jpg' },
+        { name: 'Coller Shift', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coller-shift-1e3b60e.jpg' },
+        { name: 'Coller Wheel Side', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coller-wheel-side-fe351bd.jpg' }
+      ]
     },
     {
       id: 5,
       title: 'Adapters & Connectors',
-      image: '/images/automotive.jpg',
       description: 'Specialized connectors that ensure proper integration between various automotive systems.',
+      slug: 'adapters-connectors',
+      products: [
+        { name: 'Upper Case', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/upper-case-55386fb.jpg' },
+        { name: 'Inner Pole', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/inner-pole-a28eae1.jpg' },
+        { name: 'Plug', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/plug-5ca7560.jpg' },
+        { name: 'Adjecting Pin', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/adjecting-pin-e5662cc.JPG' }
+      ]
     },
     {
       id: 6,
       title: 'Precision Machined Parts',
-      image: '/images/machined.jpg',
       description: 'Custom machined components manufactured with tight tolerances and superior finish.',
+      slug: 'precision-machined-parts',
+      products: [
+        { name: 'Pole Shoe 1.5 HP', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/pole-shoe-1.5-hp-54076a8.jpg' }
+      ]
     },
   ];
 
@@ -56,23 +92,13 @@ const Products: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {productCategories.map((category) => (
-            <Card key={category.id} className="overflow-hidden">
-              <div className="h-48 bg-muted flex items-center justify-center">
-                <div className="text-4xl text-muted-foreground/50">[Image]</div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{category.title}</h3>
-                <p className="text-muted-foreground mb-4">{category.description}</p>
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full"
-                  onClick={() => window.location.href = `/products/${category.title.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`}
-                >
-                  Learn More
-                </Button>
-              </CardContent>
-            </Card>
+            <ProductCarousel
+              key={category.id}
+              categoryTitle={category.title}
+              categoryDescription={category.description}
+              productImages={category.products}
+              categorySlug={category.slug}
+            />
           ))}
         </div>
         
