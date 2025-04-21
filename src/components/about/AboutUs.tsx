@@ -204,7 +204,7 @@ const AboutUs: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
