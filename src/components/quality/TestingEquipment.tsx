@@ -36,10 +36,34 @@ const TestingEquipment: React.FC = () => {
       id: 'optical',
       name: 'Optical Equipment',
       equipment: [
-        { id: 1, name: 'Profile Projector', description: 'For inspecting complex profiles and geometric dimensions' },
-        { id: 2, name: 'Magnascope', description: 'For detailed surface inspection and analysis' },
-        { id: 3, name: 'Metallurgical Microscope', description: 'For microstructure analysis of materials' },
-        { id: 4, name: 'Trinocular Stereozoom Microscope', description: 'For detailed 3D inspection of components' },
+        { 
+          id: 1, 
+          name: 'Profile Projector', 
+          description: 'For inspecting complex profiles and geometric dimensions',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/profile-projector-673ad9c.png',
+          alt: 'Profile Projector - For inspecting complex profiles and geometric dimensions'
+        },
+        { 
+          id: 2, 
+          name: 'Magnascope', 
+          description: 'For detailed surface inspection and analysis',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/magnascope-4638d63.png',
+          alt: 'Magnascope - For detailed surface inspection and analysis'
+        },
+        { 
+          id: 3, 
+          name: 'Metallurgical Microscope', 
+          description: 'For microstructure analysis of materials',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/metallurgical-microscope-d285bc3.png',
+          alt: 'Metallurgical Microscope - For microstructure analysis of materials'
+        },
+        { 
+          id: 4, 
+          name: 'Trinocular Stereozoom Microscope', 
+          description: 'For detailed 3D inspection of components',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/trinocular-stereozoom-microscope-325c15b.png',
+          alt: 'Trinocular Stereozoom Microscope - For detailed 3D inspection of components'
+        },
       ],
     },
     {
@@ -88,13 +112,13 @@ const TestingEquipment: React.FC = () => {
                 {category.equipment.map((item) => (
                   <Card key={item.id} className="overflow-hidden">
                     <div className="h-48 bg-muted flex items-center justify-center relative overflow-hidden">
-                      {category.id === 'measurement' && item.image ? (
+                      {(category.id === 'measurement' || category.id === 'optical') && item.image ? (
                         <Image 
                           src={item.image}
                           alt={item.alt || `${item.name} - ${item.description}`}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          className="object-cover"
+                          className="object-contain p-2"
                         />
                       ) : (
                         <span className="text-muted-foreground">[{item.name} Image]</span>

@@ -4,13 +4,9 @@ import Image from 'next/image';
 
 const TestingEquipment: React.FC = () => {
   const equipmentList = [
-    "Profile Projector (Meerametzer)",
     "Roughness Tester (Mitutoyo SJ-201)",
     "Micro Vickers Hardness Tester (Truemet)",
     "Rockwell Hardness Tester (Saroj)",
-    "Magnascope (Truemet)",
-    "Metallurgical Microscope (Truemet)",
-    "Trinocular Stereozoom Microscope (Truemet)",
     "Coating Thickness Testers",
     "Specialized Equipment (Laser Marking Machine, Leakage Testing Machine)"
   ];
@@ -33,6 +29,33 @@ const TestingEquipment: React.FC = () => {
       description: "For precise height measurements and scribing operations",
       image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/height-gauge-4837fac.jpg",
       alt: "Height Gauge - Precision tool for height measurements and scribing operations"
+    }
+  ];
+  
+  const opticalEquipment = [
+    {
+      name: "Profile Projector",
+      description: "For inspecting complex profiles and geometric dimensions",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/profile-projector-673ad9c.png",
+      alt: "Profile Projector - For inspecting complex profiles and geometric dimensions"
+    },
+    {
+      name: "Magnascope",
+      description: "For detailed surface inspection and analysis",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/magnascope-4638d63.png",
+      alt: "Magnascope - For detailed surface inspection and analysis"
+    },
+    {
+      name: "Metallurgical Microscope",
+      description: "For microstructure analysis of materials",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/metallurgical-microscope-d285bc3.png",
+      alt: "Metallurgical Microscope - For microstructure analysis of materials"
+    },
+    {
+      name: "Trinocular Stereozoom Microscope",
+      description: "For detailed 3D inspection of components",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/trinocular-stereozoom-microscope-325c15b.png",
+      alt: "Trinocular Stereozoom Microscope - For detailed 3D inspection of components"
     }
   ];
 
@@ -74,6 +97,29 @@ const TestingEquipment: React.FC = () => {
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h4 className="text-lg font-semibold mb-2">{tool.name}</h4>
+                  <p className="text-muted-foreground text-sm">{tool.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold mb-6 text-center">Optical Equipment</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {opticalEquipment.map((tool, index) => (
+              <Card key={index} className="overflow-hidden">
+                <div className="h-48 bg-muted relative overflow-hidden">
+                  <Image 
+                    src={tool.image}
+                    alt={tool.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="object-contain p-2"
                   />
                 </div>
                 <CardContent className="p-6">
