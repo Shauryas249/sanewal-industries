@@ -8,6 +8,7 @@ import Clients from "@/components/Clients";
 import Quality from "@/components/Quality";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Container from "@/components/ui/container";
 
 export default function Home() {
   return (

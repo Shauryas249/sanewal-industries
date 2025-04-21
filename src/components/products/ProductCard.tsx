@@ -10,7 +10,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ name, description, imagePath }) => {
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-md transform hover:scale-[1.02] duration-300">
+    <Card className="overflow-hidden transition-all hover:shadow-md transform hover:scale-[1.02] duration-300 border border-border/40 h-full">
       <div className="h-48 bg-gray-100 flex items-center justify-center relative">
         {imagePath ? (
           <div className="relative w-full h-full">
@@ -27,9 +27,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, description, imagePath 
           </div>
         )}
       </div>
-      <CardContent className="p-4">
-        <h3 className="text-lg font-bold mb-1">{name}</h3>
-        <p className="text-sm text-muted-foreground">{description}</p>
+      <CardContent className="p-6">
+        <h3 className="text-lg font-bold mb-2">{name}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
       </CardContent>
     </Card>
   );

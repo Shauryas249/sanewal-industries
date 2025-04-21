@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import Container from './ui/container';
 
 const Products: React.FC = () => {
   const productCategories = [
@@ -43,8 +44,8 @@ const Products: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-muted/30">
-      <div className="container">
+    <section className="py-24 bg-muted/30">
+      <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Products</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -80,7 +81,7 @@ const Products: React.FC = () => {
             View All Products
           </Button>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

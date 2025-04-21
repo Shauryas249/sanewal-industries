@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Logo from './Logo';
+import Container from './ui/container';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Menu, ChevronDown, ChevronRight, ChevronDown as ChevronDownIcon } from 'lucide-react';
@@ -32,7 +33,7 @@ const Header = () => {
 
   return (
     <header className="w-full sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
-      <div className="container flex justify-between items-center py-4">
+      <Container className="flex justify-between items-center py-3">
         <div className="cursor-pointer" onClick={() => router.push("/")}>
           <Logo />
         </div>
@@ -197,7 +198,7 @@ const Header = () => {
             </div>
           </SheetContent>
         </Sheet>
-      </div>
+      </Container>
     </header>
   );
 };

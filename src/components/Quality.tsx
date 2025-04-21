@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import Container from './ui/container';
 
 const Quality: React.FC = () => {
   const certifications = [
@@ -27,8 +28,8 @@ const Quality: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-muted/30">
-      <div className="container">
+    <section className="py-24 bg-muted/30">
+      <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Quality Assurance</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -56,7 +57,7 @@ const Quality: React.FC = () => {
             We maintain strict quality control at every stage of production to ensure our products meet the highest standards of performance and reliability.
           </p>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

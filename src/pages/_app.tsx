@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col bg-background">
       <Component {...pageProps} />
       <Toaster />
     </div>

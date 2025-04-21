@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import ProductCard from './ProductCard';
 import { Button } from '@/components/ui/button';
 import { Settings, Hammer, Car, Wrench, Package } from 'lucide-react';
+import Container from '../ui/container';
 
 interface ProductItem {
   name: string;
@@ -258,8 +259,8 @@ const ProductCategories: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-16">
-      <div className="container">
+    <section className="py-24">
+      <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Product Categories</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -379,7 +380,7 @@ const ProductCategories: React.FC = () => {
             </div>
           </div>
         </Tabs>
-      </div>
+      </Container>
     </section>
   );
 };

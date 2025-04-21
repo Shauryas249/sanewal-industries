@@ -1,10 +1,11 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
+import Container from './ui/container';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-muted/50 py-12">
-      <div className="container">
+    <footer className="bg-muted/50 py-16">
+      <Container>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Sanewal Auto Engineers Pvt. Ltd.</h3>
@@ -42,7 +43,7 @@ const Footer: React.FC = () => {
         <div className="text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Sanewal Auto Engineers Private Ltd. All rights reserved.</p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

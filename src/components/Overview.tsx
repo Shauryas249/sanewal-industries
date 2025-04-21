@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import Container from './ui/container';
 
 const Overview: React.FC = () => {
   return (
-    <section className="py-16 bg-background">
-      <div className="container">
+    <section className="py-24 bg-background">
+      <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Company Overview</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -66,7 +67,7 @@ const Overview: React.FC = () => {
             </CardContent>
           </Card>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
