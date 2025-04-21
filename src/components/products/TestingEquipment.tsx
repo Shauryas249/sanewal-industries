@@ -3,12 +3,49 @@ import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 
 const TestingEquipment: React.FC = () => {
-  const equipmentList = [
-    "Roughness Tester (Mitutoyo SJ-201)",
-    "Micro Vickers Hardness Tester (Truemet)",
-    "Rockwell Hardness Tester (Saroj)",
-    "Coating Thickness Testers",
-    "Specialized Equipment (Laser Marking Machine, Leakage Testing Machine)"
+  // Empty equipment list since we're displaying all items with images now
+  const equipmentList: string[] = [];
+  
+  const testingInstruments = [
+    {
+      name: "Roughness Tester",
+      description: "For measuring surface texture and finish quality",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/roughness-tester-2654181.png",
+      alt: "Roughness Tester - For measuring surface texture and finish quality"
+    },
+    {
+      name: "Micro Vickers Hardness Tester",
+      description: "For precise hardness testing of materials",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/micro-vickers-hardness-tester-dc588b3.png",
+      alt: "Micro Vickers Hardness Tester - For precise hardness testing of materials"
+    },
+    {
+      name: "Rockwell Hardness Tester",
+      description: "For evaluating material hardness properties",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rockwell-hardness-tester-344992d.png",
+      alt: "Rockwell Hardness Tester - For evaluating material hardness properties"
+    },
+    {
+      name: "Coating Thickness Testers",
+      description: "For measuring the thickness of surface coatings",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coating-thickness-tester-0c3d714.png",
+      alt: "Coating Thickness Testers - For measuring the thickness of surface coatings"
+    }
+  ];
+  
+  const specializedEquipment = [
+    {
+      name: "Laser Marking Machine",
+      description: "For permanent identification and traceability marking",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/laser-marking-machine-34f7d05.png",
+      alt: "Laser Marking Machine - For permanent identification and traceability marking"
+    },
+    {
+      name: "Leakage Testing Machine",
+      description: "For verifying seal integrity and detecting leaks",
+      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/leakage-testing-machine-3abe856.png",
+      alt: "Leakage Testing Machine - For verifying seal integrity and detecting leaks"
+    }
   ];
 
   const measurementTools = [
@@ -119,6 +156,52 @@ const TestingEquipment: React.FC = () => {
                     alt={tool.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="object-contain p-2"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h4 className="text-lg font-semibold mb-2">{tool.name}</h4>
+                  <p className="text-muted-foreground text-sm">{tool.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold mb-6 text-center">Testing Instruments</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {testingInstruments.map((tool, index) => (
+              <Card key={index} className="overflow-hidden">
+                <div className="h-48 bg-muted relative overflow-hidden">
+                  <Image 
+                    src={tool.image}
+                    alt={tool.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="object-contain p-2"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h4 className="text-lg font-semibold mb-2">{tool.name}</h4>
+                  <p className="text-muted-foreground text-sm">{tool.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold mb-6 text-center">Specialized Equipment</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {specializedEquipment.map((tool, index) => (
+              <Card key={index} className="overflow-hidden">
+                <div className="h-48 bg-muted relative overflow-hidden">
+                  <Image 
+                    src={tool.image}
+                    alt={tool.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                     className="object-contain p-2"
                   />
                 </div>

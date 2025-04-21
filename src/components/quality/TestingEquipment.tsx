@@ -70,18 +70,54 @@ const TestingEquipment: React.FC = () => {
       id: 'testing',
       name: 'Testing Instruments',
       equipment: [
-        { id: 1, name: 'Roughness Tester', description: 'For measuring surface texture and finish quality' },
-        { id: 2, name: 'Micro Vickers Hardness Tester', description: 'For precise hardness testing of materials' },
-        { id: 3, name: 'Rockwell Hardness Tester', description: 'For evaluating material hardness properties' },
-        { id: 4, name: 'Coating Thickness Testers', description: 'For measuring the thickness of surface coatings' },
+        { 
+          id: 1, 
+          name: 'Roughness Tester', 
+          description: 'For measuring surface texture and finish quality',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/roughness-tester-2654181.png',
+          alt: 'Roughness Tester - For measuring surface texture and finish quality'
+        },
+        { 
+          id: 2, 
+          name: 'Micro Vickers Hardness Tester', 
+          description: 'For precise hardness testing of materials',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/micro-vickers-hardness-tester-dc588b3.png',
+          alt: 'Micro Vickers Hardness Tester - For precise hardness testing of materials'
+        },
+        { 
+          id: 3, 
+          name: 'Rockwell Hardness Tester', 
+          description: 'For evaluating material hardness properties',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rockwell-hardness-tester-344992d.png',
+          alt: 'Rockwell Hardness Tester - For evaluating material hardness properties'
+        },
+        { 
+          id: 4, 
+          name: 'Coating Thickness Testers', 
+          description: 'For measuring the thickness of surface coatings',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coating-thickness-tester-0c3d714.png',
+          alt: 'Coating Thickness Testers - For measuring the thickness of surface coatings'
+        },
       ],
     },
     {
       id: 'specialized',
       name: 'Specialized Equipment',
       equipment: [
-        { id: 1, name: 'Laser Marking Machine', description: 'For permanent identification and traceability marking' },
-        { id: 2, name: 'Leakage Testing Machine', description: 'For verifying seal integrity and detecting leaks' },
+        { 
+          id: 1, 
+          name: 'Laser Marking Machine', 
+          description: 'For permanent identification and traceability marking',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/laser-marking-machine-34f7d05.png',
+          alt: 'Laser Marking Machine - For permanent identification and traceability marking'
+        },
+        { 
+          id: 2, 
+          name: 'Leakage Testing Machine', 
+          description: 'For verifying seal integrity and detecting leaks',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/leakage-testing-machine-3abe856.png',
+          alt: 'Leakage Testing Machine - For verifying seal integrity and detecting leaks'
+        },
       ],
     },
   ];
@@ -112,7 +148,7 @@ const TestingEquipment: React.FC = () => {
                 {category.equipment.map((item) => (
                   <Card key={item.id} className="overflow-hidden">
                     <div className="h-48 bg-muted flex items-center justify-center relative overflow-hidden">
-                      {(category.id === 'measurement' || category.id === 'optical') && item.image ? (
+                      {item.image ? (
                         <Image 
                           src={item.image}
                           alt={item.alt || `${item.name} - ${item.description}`}
