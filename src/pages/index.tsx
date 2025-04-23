@@ -1,36 +1,41 @@
-import React from "react";
-import Head from "next/head";
-import Header from "@/components/Header";
+import React, { Suspense } from "react";
+import Layout from "@/components/layout/Layout";
 import Hero from "@/components/Hero";
 import Overview from "@/components/Overview";
 import Products from "@/components/Products";
 import Clients from "@/components/Clients";
 import Quality from "@/components/Quality";
 import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
-import Container from "@/components/ui/container";
+
+// Define metadata for SEO
+const metadata = {
+  title: "Sanewal Auto Engineers - Precision Automotive Components",
+  description: "IATF 16949:2016 & ISO 14001:2015 certified company engaged in manufacturing of Machined/Forged Components for the automotive industry.",
+  keywords: "automotive components, precision engineering, machined components, forged components, IATF 16949, ISO 14001",
+  ogImage: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/sanewal-og-image.jpg"
+};
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Sanewal Auto Engineers - Precision Automotive Components</title>
-        <meta name="description" content="IATF 16949:2016 & ISO 14001:2015 certified company engaged in manufacturing of Machined/Forged Components for the automotive industry." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="bg-background min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">
-          <Hero />
-          <Overview />
-          <Products />
-          <Clients />
-          <Quality />
-          <CTA />
-        </main>
-        <Footer />
-      </div>
-    </>
+    <Layout
+      title={metadata.title}
+      description={metadata.description}
+      keywords={metadata.keywords}
+      ogImage={metadata.ogImage}
+    >
+      <Suspense fallback={<div className="h-[70vh] bg-muted/20 animate-pulse" />}>
+        <Hero />
+      </Suspense>
+      
+      <Overview />
+      
+      <Suspense fallback={<div className="h-96 bg-muted/20 animate-pulse" />}>
+        <Products />
+      </Suspense>
+      
+      <Clients />
+      <Quality />
+      <CTA />
+    </Layout>
   );
 }

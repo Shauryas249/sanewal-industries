@@ -1,21 +1,39 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import React, { useState, useRef, useCallback } from 'react';
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselPrevious, 
+  CarouselNext,
+  type CarouselApi
+} from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Play, Pause } from 'lucide-react';
 import Autoplay from 'embla-carousel-autoplay';
+import OptimizedImage from '@/components/ui/optimized-image';
+
+interface HeroSlide {
+  id: number;
+  image: string;
+  alt: string;
+  title: string;
+  subtitle: string;
+  cta: string;
+  link: string;
+}
 
 const Hero: React.FC = () => {
   const router = useRouter();
-  // For a real implementation, we would need to use the Embla API to track the current slide
-  // For now, we'll just use a static value for the UI
-  const [currentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [api, setApi] = useState<CarouselApi>();
+  
   const autoplayRef = useRef(
     Autoplay({ delay: 5000, stopOnInteraction: false })
   );
-  const [isPaused, setIsPaused] = useState(false);
 
-  const slides = [
+  const slides: HeroSlide[] = [
     {
       id: 1,
       image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/automotive-engineering-excellence-6ec63a8.jpg',
@@ -45,44 +63,68 @@ const Hero: React.FC = () => {
     },
   ];
 
-  const handlePause = () => {
+  const handlePause = useCallback(() => {
     if (autoplayRef.current && !isPaused) {
       autoplayRef.current.stop();
       setIsPaused(true);
     }
-  };
+  }, [isPaused]);
 
-  const handleResume = () => {
+  const handleResume = useCallback(() => {
     if (autoplayRef.current && isPaused) {
       autoplayRef.current.play();
       setIsPaused(false);
     }
-  };
+  }, [isPaused]);
+
+  // Update current slide when the carousel changes
+  const onSelect = useCallback(() => {
+    if (!api) return;
+    setCurrentSlide(api.selectedScrollSnap());
+  }, [api]);
+
+  // Set up the carousel API and event listeners
+  React.useEffect(() => {
+    if (!api) return;
+    
+    onSelect();
+    api.on("select", onSelect);
+    
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api, onSelect]);
 
   return (
-    <section className="relative">
+    <section className="relative" aria-label="Featured highlights">
       <Carousel 
         className="w-full" 
         plugins={[autoplayRef.current]}
         onMouseEnter={handlePause}
         onMouseLeave={handleResume}
-        // Note: We'll handle slide change differently
+        setApi={setApi}
+        opts={{
+          loop: true,
+        }}
       >
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={slide.id}>
               <div className="relative h-[70vh] w-full">
-                <div 
-                  className="absolute inset-0 bg-black/60 flex items-center justify-center transition-transform duration-500 ease-in-out transform scale-105"
-                  style={{
-                    backgroundImage: `url(${slide.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
-                >
-                  <div className="absolute inset-0 bg-black/60"></div>
-                  <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                <div className="absolute inset-0 bg-black/60 z-10"></div>
+                <div className="absolute inset-0">
+                  <OptimizedImage
+                    src={slide.image}
+                    alt={slide.alt}
+                    fill
+                    priority={index === 0}
+                    className="object-cover transition-transform duration-500 ease-in-out transform scale-105"
+                    sizes="100vw"
+                  />
+                </div>
+                <div className="relative z-20 h-full flex items-center justify-center">
+                  <div className="text-center px-4 max-w-3xl mx-auto">
+                    <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 font-heading">
                       {slide.title}
                     </h1>
                     <p className="text-lg md:text-xl text-white/90 mb-8">
@@ -102,33 +144,40 @@ const Hero: React.FC = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-4" />
-        <CarouselNext className="right-4" />
+        
+        <CarouselPrevious 
+          className="left-4 z-30" 
+          aria-label="Show previous slide"
+        />
+        <CarouselNext 
+          className="right-4 z-30" 
+          aria-label="Show next slide"
+        />
         
         {/* Slide Indicators */}
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2">
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-30" role="tablist">
           {slides.map((_, index) => (
-            <div
+            <button
               key={index}
               className={`w-3 h-3 rounded-full transition-all ${index === currentSlide ? 'bg-primary w-6' : 'bg-white/50'}`}
+              onClick={() => api?.scrollTo(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              aria-selected={index === currentSlide}
+              role="tab"
             />
           ))}
         </div>
         
         {/* Pause/Play Button */}
         <button 
-          className="absolute bottom-6 right-6 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all"
+          className="absolute bottom-6 right-6 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all z-30"
           onClick={() => isPaused ? handleResume() : handlePause()}
+          aria-label={isPaused ? "Play slideshow" : "Pause slideshow"}
         >
           {isPaused ? (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
+            <Play className="h-5 w-5" />
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-              <rect x="6" y="4" width="4" height="16"></rect>
-              <rect x="14" y="4" width="4" height="16"></rect>
-            </svg>
+            <Pause className="h-5 w-5" />
           )}
         </button>
       </Carousel>
