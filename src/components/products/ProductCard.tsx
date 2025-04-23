@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import OptimizedImage from '@/components/ui/optimized-image';
 
 interface ProductCardProps {
   name: string;
@@ -54,14 +53,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <Card 
         className={`overflow-hidden transition-all hover:shadow-md ${isClickable ? 'transform hover:scale-[1.02]' : ''} duration-300 border border-border/40 h-full`}
       >
-        <div className="h-48 bg-muted flex items-center justify-center relative">
+        <div className="h-48 bg-muted flex items-center justify-center relative overflow-hidden">
           {imagePath ? (
-            <OptimizedImage
+            <img
               src={imagePath}
               alt={`${name} - ${description}`}
-              fill
-              className="object-cover transition-transform duration-300 hover:scale-105"
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+              className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
             />
           ) : (
             <div className="w-full h-full bg-muted flex items-center justify-center">
