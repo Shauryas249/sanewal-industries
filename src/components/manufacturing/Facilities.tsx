@@ -17,9 +17,13 @@ const Facilities: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Card className="overflow-hidden">
             <div className="relative h-64 w-full">
-              <div className="absolute inset-0 flex items-center justify-center bg-muted">
-                <span className="text-muted-foreground">[Facility Image]</span>
-              </div>
+              <Image 
+                src="https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/manufacturing-floor-75c7651.jpg"
+                alt="Interior view of Sanewal Auto Engineers' main production facility with precision machining equipment"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-2">Production Plant</h3>
@@ -31,9 +35,13 @@ const Facilities: React.FC = () => {
           
           <Card className="overflow-hidden">
             <div className="relative h-64 w-full">
-              <div className="absolute inset-0 flex items-center justify-center bg-muted">
-                <span className="text-muted-foreground">[Facility Image]</span>
-              </div>
+              <Image 
+                src="https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/quality-control-lab-26bedbb.jpg"
+                alt="Advanced quality control laboratory with measurement and testing equipment for automotive components"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-2">Quality Control Lab</h3>
