@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { UseFormReturn } from 'react-hook-form';
+import { UseFormReturn, FieldValues } from 'react-hook-form';
 import { useToast } from '@/components/ui/use-toast';
 
 interface UseFormSubmitOptions<T> {
@@ -12,7 +12,7 @@ interface UseFormSubmitOptions<T> {
 /**
  * Custom hook for handling form submission with loading state and toast notifications
  */
-export function useFormSubmit<T>(
+export function useFormSubmit<T extends FieldValues>(
   form: UseFormReturn<T>,
   options: UseFormSubmitOptions<T>
 ) {
