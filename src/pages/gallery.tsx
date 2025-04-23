@@ -97,6 +97,47 @@ const GalleryPage: NextPage = () => {
       title: 'Manufacturing Plant',
       description: 'Exterior view of our state-of-the-art manufacturing plant.',
       tags: []
+    },
+    // New images from CDN
+    {
+      id: 'quality-control-lab',
+      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/quality-control-lab-26bedbb.jpg',
+      alt: 'Quality Control Laboratory',
+      width: 1200,
+      height: 800,
+      title: 'Quality Control Lab',
+      description: 'Our advanced quality control laboratory with precision testing equipment.',
+      tags: ['quality', 'testing']
+    },
+    {
+      id: 'warehouse-facility',
+      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/warehouse-facility-07a927b.jpg',
+      alt: 'Warehouse Facility',
+      width: 1200,
+      height: 800,
+      title: 'Warehouse Facility',
+      description: 'Spacious warehouse facility for efficient inventory management and logistics.',
+      tags: ['warehouse', 'logistics']
+    },
+    {
+      id: 'assembly-line',
+      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/assembly-line-faa4090.jpg',
+      alt: 'Assembly Line',
+      width: 1200,
+      height: 800,
+      title: 'Assembly Line',
+      description: 'Modern assembly line where components are assembled with precision and care.',
+      tags: ['assembly', 'production']
+    },
+    {
+      id: 'manufacturing-floor',
+      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/manufacturing-floor-75c7651.jpg',
+      alt: 'Manufacturing Floor',
+      width: 1200,
+      height: 800,
+      title: 'Manufacturing Floor',
+      description: 'State-of-the-art manufacturing floor with advanced machinery and equipment.',
+      tags: ['manufacturing', 'production']
     }
   ];
 
