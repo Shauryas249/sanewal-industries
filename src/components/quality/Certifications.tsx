@@ -91,9 +91,23 @@ const Certifications: React.FC = () => {
               </Card>
               
               <div className="mt-6 flex justify-center">
-                <div className="w-64 h-64 bg-muted flex items-center justify-center">
-                  <span className="text-muted-foreground">[{cert.name} Certificate Image]</span>
-                </div>
+                {cert.id === 'iatf' ? (
+                  <div className="relative w-[300px] h-[350px] overflow-hidden border border-muted rounded-md">
+                    <img 
+                      src="https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/image-941968b.png"
+                      alt="Sanewal Auto Engineers IATF 16949:2016 Automotive Quality Management System certification"
+                      className="object-contain w-full h-full"
+                    />
+                  </div>
+                ) : (
+                  <div className="relative w-[300px] h-[350px] overflow-hidden border border-muted rounded-md">
+                    <img 
+                      src="https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/image-ba77f16.png"
+                      alt="Sanewal Auto Engineers ISO 14001:2015 Environmental Management System certification"
+                      className="object-contain w-full h-full"
+                    />
+                  </div>
+                )}
               </div>
             </TabsContent>
           ))}
