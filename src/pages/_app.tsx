@@ -35,7 +35,35 @@ export default function App({ Component, pageProps }: AppProps) {
 
   // Prevent flash while theme loads
   if (!mounted) {
-    return null;
+    // Add a script to prevent flash of wrong theme
+    return (
+      <div className={`${inter.variable} ${montserrat.variable} ${openSans.variable} font-body`}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                // Default to light theme
+                document.documentElement.classList.remove('dark');
+                document.documentElement.style.setProperty('--mode', 'light');
+                
+                // Check for saved theme preference
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                  document.documentElement.style.setProperty('--mode', 'dark');
+                } else if (savedTheme === 'system') {
+                  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  if (systemPrefersDark) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.style.setProperty('--mode', 'dark');
+                  }
+                }
+              })();
+            `,
+          }}
+        />
+      </div>
+    );
   }
 
   return (

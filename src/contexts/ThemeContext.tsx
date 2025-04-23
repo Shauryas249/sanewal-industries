@@ -11,7 +11,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setThemeState] = useState<Theme>('system');
+  const [theme, setThemeState] = useState<Theme>('light');
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light');
 
   // Function to set theme and update localStorage
@@ -42,15 +42,16 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   };
 
-  // Initialize theme from localStorage or system preference
+  // Initialize theme from localStorage or default to light
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     
     if (savedTheme) {
       setTheme(savedTheme);
     } else {
-      // Default to system preference
-      setTheme('system');
+      // Default to light theme
+      setTheme('light');
+      localStorage.setItem('theme', 'light');
     }
 
     // Listen for system preference changes
