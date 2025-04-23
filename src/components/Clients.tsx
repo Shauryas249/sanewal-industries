@@ -1,15 +1,30 @@
 import React from 'react';
 import Container from './ui/container';
+import OptimizedImage from './ui/optimized-image';
 
 const Clients: React.FC = () => {
-  // Placeholder for client logos
+  // Client logos with proper information
   const clients = [
-    { id: 1, name: 'Client 1' },
-    { id: 2, name: 'Client 2' },
-    { id: 3, name: 'Client 3' },
-    { id: 4, name: 'Client 4' },
-    { id: 5, name: 'Client 5' },
-    { id: 6, name: 'Client 6' },
+    { 
+      id: 1, 
+      name: 'Greaves Cotton', 
+      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/greaves-cotton-98683b0.png' 
+    },
+    { 
+      id: 2, 
+      name: 'Sonalika Tractors', 
+      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/sonalika-tractors-23786b4.png' 
+    },
+    { 
+      id: 3, 
+      name: 'New Holland', 
+      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/new-holland-ccd1e69.png' 
+    },
+    { 
+      id: 4, 
+      name: 'Hero MotoCorp', 
+      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/hero-moto-corp-e2ec2e5.png' 
+    },
   ];
 
   return (
@@ -23,10 +38,17 @@ const Clients: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {clients.map((client) => (
-            <div key={client.id} className="flex items-center justify-center p-4 bg-muted/30 rounded-md h-24">
-              <div className="text-xl font-medium text-muted-foreground">{client.name}</div>
+            <div key={client.id} className="flex items-center justify-center p-6 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow duration-300 h-32">
+              <OptimizedImage
+                src={client.logo}
+                alt={`${client.name} logo`}
+                width={200}
+                height={80}
+                className="max-h-20 w-auto object-contain"
+                priority={client.id <= 2}
+              />
             </div>
           ))}
         </div>
