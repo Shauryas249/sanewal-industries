@@ -54,12 +54,11 @@ const GalleryItem = memo(({
             className="relative overflow-hidden" 
             style={{ paddingBottom: `${aspectRatio * 100}%` }}
           >
-            <OptimizedImage
+            <img
               src={image.src}
               alt={image.alt}
-              fill
-              className="object-cover transition-transform duration-300 hover:scale-105"
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              loading="lazy"
             />
           </div>
         </div>

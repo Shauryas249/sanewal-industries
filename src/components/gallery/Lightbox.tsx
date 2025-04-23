@@ -186,13 +186,11 @@ const Lightbox = ({
                 cursor: isDragging ? 'grabbing' : 'grab'
               }}
             >
-              <Image
+              <img
                 src={image.src}
                 alt={image.alt}
-                width={image.width}
-                height={image.height}
                 className="max-h-[85vh] w-auto object-contain"
-                priority
+                loading="eager"
               />
             </div>
           </div>

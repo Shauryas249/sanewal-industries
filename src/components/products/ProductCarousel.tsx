@@ -54,15 +54,13 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({
               {productImages.map((product, index) => (
                 <CarouselItem key={index} className="h-full">
                   <div className="relative w-full h-full">
-                    <OptimizedImage 
+                    <img 
                       src={product.imagePath} 
                       alt={product.name}
-                      fill
-                      className="object-cover"
-                      priority={index === 0}
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="w-full h-full object-cover"
+                      loading={index === 0 ? "eager" : "lazy"}
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-sm z-10">
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-sm">
                       {product.name}
                     </div>
                   </div>

@@ -113,13 +113,11 @@ const Hero: React.FC = () => {
               <div className="relative h-[70vh] w-full">
                 <div className="absolute inset-0 bg-black/60 z-10"></div>
                 <div className="absolute inset-0">
-                  <OptimizedImage
+                  <img
                     src={slide.image}
                     alt={slide.alt}
-                    fill
-                    priority={index === 0}
-                    className="object-cover transition-transform duration-500 ease-in-out transform scale-105"
-                    sizes="100vw"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out transform scale-105"
+                    loading={index === 0 ? "eager" : "lazy"}
                   />
                 </div>
                 <div className="relative z-20 h-full flex items-center justify-center">
