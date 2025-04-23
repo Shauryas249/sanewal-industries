@@ -9,44 +9,44 @@ const GalleryPage: NextPage = () => {
   // Enhanced gallery images with titles and descriptions
   const galleryImages: GalleryImage[] = [
     {
-      id: 'machined1',
-      src: '/images/machined.jpg',
-      alt: 'Precision Machined Components',
+      id: 'precision-machined-components',
+      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/precision-machined-components-7dc497c.jpg',
+      alt: 'High-precision machined automotive fasteners and components',
       width: 1200,
       height: 800,
-      title: 'Machined Components',
+      title: 'Precision Machined Components',
       description: 'High-precision machined components manufactured to exact specifications.',
-      tags: []
+      tags: ['precision', 'machining']
     },
     {
-      id: 'forged1',
-      src: '/images/forged.jpg',
-      alt: 'Forged Automotive Components',
+      id: 'forged-automotive-components',
+      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/forged-automotive-components-b0e3599.jpg',
+      alt: 'Durable forged metal components for high-stress automotive applications',
       width: 1200,
       height: 800,
-      title: 'Forged Components',
+      title: 'Forged Automotive Components',
       description: 'Durable forged components designed for high-stress automotive applications.',
-      tags: []
+      tags: ['forged', 'automotive']
     },
     {
-      id: 'automotive1',
-      src: '/images/automotive.jpg',
-      alt: 'Automotive Parts and Components',
+      id: 'automotive-parts',
+      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/automotive-parts-30c34e8.jpg',
+      alt: 'Specialized automotive components engineered for performance and reliability',
       width: 1200,
       height: 800,
       title: 'Automotive Parts',
       description: 'Specialized automotive components engineered for performance and reliability.',
-      tags: []
+      tags: ['automotive', 'parts']
     },
     {
-      id: 'custom1',
-      src: '/images/custom.jpg',
-      alt: 'Custom Engineered Solutions',
+      id: 'custom-solutions',
+      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/custom-solutions-76236e8.jpg',
+      alt: 'Tailored engineering solutions for specific automotive requirements',
       width: 1200,
       height: 800,
-      title: 'Custom Solutions',
+      title: 'Custom Engineered Solutions',
       description: 'Tailored engineering solutions designed to meet specific client requirements.',
-      tags: []
+      tags: ['custom', 'engineering']
     },
     // New images from CDN
     {
