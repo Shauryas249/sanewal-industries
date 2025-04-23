@@ -9,26 +9,6 @@ const GalleryPage: NextPage = () => {
   // Enhanced gallery images with titles and descriptions
   const galleryImages: GalleryImage[] = [
     {
-      id: 'facility1',
-      src: '/images/facility1.jpg',
-      alt: 'Manufacturing Facility - Main Production Floor',
-      width: 1200,
-      height: 800,
-      title: 'Manufacturing Floor',
-      description: 'Our main manufacturing area with CNC machines and automated production lines.',
-      tags: []
-    },
-    {
-      id: 'facility2',
-      src: '/images/facility2.jpg',
-      alt: 'Manufacturing Facility - Assembly Line',
-      width: 1200,
-      height: 800,
-      title: 'Assembly Line',
-      description: 'Dedicated assembly area where components are assembled with precision.',
-      tags: []
-    },
-    {
       id: 'machined1',
       src: '/images/machined.jpg',
       alt: 'Precision Machined Components',
@@ -66,36 +46,6 @@ const GalleryPage: NextPage = () => {
       height: 800,
       title: 'Custom Solutions',
       description: 'Tailored engineering solutions designed to meet specific client requirements.',
-      tags: []
-    },
-    {
-      id: 'quality1',
-      src: '/images/hero1.jpg',
-      alt: 'Quality Control Laboratory',
-      width: 1200,
-      height: 800,
-      title: 'Quality Control Lab',
-      description: 'Advanced quality control laboratory with state-of-the-art measuring equipment.',
-      tags: []
-    },
-    {
-      id: 'warehouse1',
-      src: '/images/hero2.jpg',
-      alt: 'Warehouse and Logistics Center',
-      width: 1200,
-      height: 800,
-      title: 'Warehouse Facility',
-      description: 'Modern warehouse facility for efficient inventory management and distribution.',
-      tags: []
-    },
-    {
-      id: 'exterior1',
-      src: '/images/hero3.jpg',
-      alt: 'Exterior View of Manufacturing Plant',
-      width: 1200,
-      height: 800,
-      title: 'Manufacturing Plant',
-      description: 'Exterior view of our state-of-the-art manufacturing plant.',
       tags: []
     },
     // New images from CDN
