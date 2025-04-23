@@ -11,8 +11,8 @@ const CTA: React.FC = () => {
           <p className="text-lg mb-8">
             Contact us today to discuss how our precision-engineered components can meet your specific requirements.
           </p>
-          <Button size="lg">
-            Contact Us
+          <Button size="lg" asChild>
+            <a href="/contact">Contact Us</a>
           </Button>
         </div>
       </Container>

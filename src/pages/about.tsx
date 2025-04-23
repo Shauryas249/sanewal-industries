@@ -9,7 +9,7 @@ const About: NextPage = () => {
     <>
       <Head>
         <title>About Us | Sanewal Auto Engineers</title>
-        <meta name="description" content="Learn about Sanewal Auto Engineers, a leading manufacturer of premium Machined and Forged Components & Fasteners since 1985." />
+        <meta name="description" content="Learn about Sanewal Auto Engineers, a leading manufacturer of premium Machined and Forged Components & Fasteners since 1985. Located at Plot no. 253 HSIIDC, Rohtak-124001 (Haryana) India." />
       </Head>
       
       <div className="bg-background min-h-screen flex flex-col">

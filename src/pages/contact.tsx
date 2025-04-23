@@ -12,24 +12,23 @@ export default function Contact() {
       title: "Address",
       details: [
         "Sanewal Auto Engineers Private Ltd",
-        "Industrial Area, Phase 1",
-        "Chandigarh, India - 160002"
+        "Plot no. 253 HSIIDC,",
+        "Rohtak-124001 (Haryana) India",
+        "Pin Code: 124001, HARYANA (INDIA)"
       ]
     },
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Phone",
       details: [
-        "+91 172 2655123",
-        "+91 172 2655124"
+        <a key="phone" href="tel:+911262249535" className="hover:text-primary transition-colors">+91-1262-249535</a>
       ]
     },
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
       details: [
-        "info@sanewalauto.com",
-        "sales@sanewalauto.com"
+        <a key="email" href="mailto:info@sanewalauto.com" className="hover:text-primary transition-colors">info@sanewalauto.com</a>
       ]
     },
     {
@@ -47,7 +46,7 @@ export default function Contact() {
     <>
       <Head>
         <title>Contact Us - Sanewal Auto Engineers</title>
-        <meta name="description" content="Get in touch with Sanewal Auto Engineers for inquiries about our machined and forged automotive components." />
+        <meta name="description" content="Contact Sanewal Auto Engineers at Plot no. 253 HSIIDC, Rohtak-124001 (Haryana) India. Call us at +91-1262-249535 or email info@sanewalauto.com for inquiries about our machined and forged automotive components." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -95,13 +94,15 @@ export default function Contact() {
             <div className="container">
               <div className="bg-muted rounded-lg overflow-hidden h-[400px]">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.2844868551394!2d76.7850441!3d30.7059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDQyJzIxLjIiTiA3NsKwNDcnMDYuMiJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.1123532929166!2d76.5785!3d28.8235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQ5JzI0LjYiTiA3NsKwMzQnNDIuNiJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
                   allowFullScreen 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
+                  title="Sanewal Auto Engineers Location"
+                  aria-label="Map showing Sanewal Auto Engineers location in Rohtak, Haryana"
                 ></iframe>
               </div>
             </div>
