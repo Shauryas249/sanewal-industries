@@ -1,14 +1,3 @@
-import { fileURLToPath } from 'url';
-import path, { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-// Import bundle analyzer conditionally
-const withBundleAnalyzer = process.env.ANALYZE === 'true'
-  ? (await import('@next/bundle-analyzer')).default({ enabled: true })
-  : (config) => config;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -44,4 +33,4 @@ const nextConfig = {
   poweredByHeader: false,
 };
 
-export default withBundleAnalyzer(nextConfig);
+export default nextConfig;
