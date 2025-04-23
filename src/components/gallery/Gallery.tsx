@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
 import Lightbox from './Lightbox';
 
 export interface GalleryImage {
@@ -25,11 +24,6 @@ interface GalleryProps {
 const Gallery = ({ images, title, description }: GalleryProps) => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [imagesLoaded, setImagesLoaded] = useState<Record<string, boolean>>({});
-
-  const handleImageLoad = (imageId: string) => {
-    setImagesLoaded(prev => ({ ...prev, [imageId]: true }));
-  };
 
   const openLightbox = (image: GalleryImage) => {
     setSelectedImage(image);
@@ -79,23 +73,19 @@ const Gallery = ({ images, title, description }: GalleryProps) => {
                 aria-label={`View ${image.title || image.alt}`}
               >
                 <div className="relative" style={{ paddingBottom: `${(image.height / image.width) * 100}%` }}>
-                  {!imagesLoaded[image.id] && (
-                    <Skeleton className="absolute inset-0 z-10" />
-                  )}
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
                     className="object-cover transition-transform duration-300 hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    onLoad={() => handleImageLoad(image.id)}
                     loading="lazy"
                   />
                 </div>
               </div>
             
               {(image.title || image.description) && (
-                <CardContent className="p-4 text-center">
+                <CardContent className="text-center">
                   {image.title && (
                     <h3 className="font-medium text-lg mb-1">{image.title}</h3>
                   )}
