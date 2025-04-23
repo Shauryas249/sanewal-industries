@@ -10,6 +10,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+import OptimizedImage from '@/components/ui/optimized-image';
 
 interface ProductImage {
   name: string;
@@ -53,13 +54,15 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({
               {productImages.map((product, index) => (
                 <CarouselItem key={index} className="h-full">
                   <div className="relative w-full h-full">
-                    <img 
+                    <OptimizedImage 
                       src={product.imagePath} 
                       alt={product.name}
-                      className="w-full h-full object-cover"
-                      loading={index === 0 ? "eager" : "lazy"}
+                      fill
+                      className="object-cover"
+                      priority={index === 0}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-sm">
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-sm z-10">
                       {product.name}
                     </div>
                   </div>
