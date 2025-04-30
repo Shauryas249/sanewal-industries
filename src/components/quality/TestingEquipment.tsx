@@ -35,8 +35,8 @@ const TestingEquipment: React.FC = () => {
           id: 4, 
           name: 'Contour Measurement Contracer', 
           description: 'For precise measurement and analysis of complex contours and surface profiles',
-          image: '',
-          alt: 'Contour Measurement Contracer - For precise measurement and analysis of complex contours and surface profiles'
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/contour-measurement-contracer-9acbc52.jpg',
+          alt: 'Contour Measurement Contracer - Precision device for measuring complex surface profiles'
         },
       ],
     },
@@ -110,8 +110,8 @@ const TestingEquipment: React.FC = () => {
           id: 5, 
           name: 'SST Chamber', 
           description: 'For accelerated corrosion testing in salt spray environments to evaluate material durability',
-          image: '',
-          alt: 'SST Chamber - For accelerated corrosion testing in salt spray environments to evaluate material durability'
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/salt-spray-test-chamber-c806302.jpg',
+          alt: 'Salt Spray Test Chamber for accelerated corrosion testing in controlled environments'
         },
       ],
     },
@@ -137,8 +137,8 @@ const TestingEquipment: React.FC = () => {
           id: 3, 
           name: 'Magnetic Crack Detector', 
           description: 'For non-destructive detection of surface and subsurface flaws in ferromagnetic materials',
-          image: '',
-          alt: 'Magnetic Crack Detector - For non-destructive detection of surface and subsurface flaws in ferromagnetic materials'
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/magnetic-crack-detector-5dfd88b.jpg',
+          alt: 'Magnetic Crack Detector with U-shaped yoke for non-destructive flaw detection in ferromagnetic materials'
         },
       ],
     },
@@ -177,6 +177,12 @@ const TestingEquipment: React.FC = () => {
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover"
+                          loading="lazy"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.onerror = null;
+                            target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlZWVlZWUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOTk5OTk5Ij5JbWFnZSBub3QgYXZhaWxhYmxlPC90ZXh0Pjwvc3ZnPg==';
+                          }}
                         />
                       ) : (
                         <span className="text-muted-foreground">[{item.name} Image]</span>
