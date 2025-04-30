@@ -31,6 +31,13 @@ const TestingEquipment: React.FC = () => {
           image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/height-gauge-4837fac.jpg',
           alt: 'Height Gauge - Precision tool for height measurements and scribing operations'
         },
+        { 
+          id: 4, 
+          name: 'Contour Measurement Contracer', 
+          description: 'For precise measurement and analysis of complex contours and surface profiles',
+          image: '',
+          alt: 'Contour Measurement Contracer - For precise measurement and analysis of complex contours and surface profiles'
+        },
       ],
     },
     {
@@ -99,6 +106,13 @@ const TestingEquipment: React.FC = () => {
           image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coating-thickness-tester-0c3d714.png',
           alt: 'Coating Thickness Testers - For measuring the thickness of surface coatings'
         },
+        { 
+          id: 5, 
+          name: 'SST Chamber', 
+          description: 'For accelerated corrosion testing in salt spray environments to evaluate material durability',
+          image: '',
+          alt: 'SST Chamber - For accelerated corrosion testing in salt spray environments to evaluate material durability'
+        },
       ],
     },
     {
@@ -118,6 +132,13 @@ const TestingEquipment: React.FC = () => {
           description: 'For verifying seal integrity and detecting leaks',
           image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/leakage-testing-machine-3abe856.png',
           alt: 'Leakage Testing Machine - For verifying seal integrity and detecting leaks'
+        },
+        { 
+          id: 3, 
+          name: 'Magnetic Crack Detector', 
+          description: 'For non-destructive detection of surface and subsurface flaws in ferromagnetic materials',
+          image: '',
+          alt: 'Magnetic Crack Detector - For non-destructive detection of surface and subsurface flaws in ferromagnetic materials'
         },
       ],
     },
