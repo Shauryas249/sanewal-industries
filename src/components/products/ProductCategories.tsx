@@ -202,10 +202,6 @@ const ProductCategories: React.FC = () => {
     adapters: {
       title: "Adapters & Connectors",
       description: "Specialized connectors that ensure proper integration between various automotive systems."
-    },
-    precision: {
-      title: "Precision Machined Parts",
-      description: "Custom machined components manufactured with tight tolerances and superior finish."
     }
   };
 
@@ -270,7 +266,7 @@ const ProductCategories: React.FC = () => {
         </div>
         
         {/* Category Navigation with Icons */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
           <Card 
             className={`cursor-pointer hover:border-primary transition-colors ${activeCategory === 'fasteners' ? 'border-primary bg-primary/5' : ''}`}
             onClick={() => handleCategoryChange('fasteners')}
@@ -320,28 +316,17 @@ const ProductCategories: React.FC = () => {
               <h3 className="font-medium">Adapters & Connectors</h3>
             </CardContent>
           </Card>
-          
-          <Card 
-            className={`cursor-pointer hover:border-primary transition-colors ${activeCategory === 'precision' ? 'border-primary bg-primary/5' : ''}`}
-            onClick={() => handleCategoryChange('precision')}
-          >
-            <CardContent className="p-4 flex flex-col items-center justify-center text-center">
-              <Settings className="h-10 w-10 text-primary mb-2" />
-              <h3 className="font-medium">Precision Machined</h3>
-            </CardContent>
-          </Card>
         </div>
         
         {/* Tabs for category filtering */}
         <Tabs value={activeCategory} onValueChange={handleCategoryChange} className="w-full">
-          <TabsList className="grid w-full grid-cols-7 mb-8">
+          <TabsList className="grid w-full grid-cols-6 mb-8">
             <TabsTrigger value="all">All</TabsTrigger>
             <TabsTrigger value="fasteners">Fasteners</TabsTrigger>
             <TabsTrigger value="pistons">Pistons</TabsTrigger>
             <TabsTrigger value="shafts">Shafts</TabsTrigger>
             <TabsTrigger value="bushings">Bushings</TabsTrigger>
             <TabsTrigger value="adapters">Adapters</TabsTrigger>
-            <TabsTrigger value="precision">Precision</TabsTrigger>
           </TabsList>
           
           {/* Product display section with fade animation - key forces re-render and animation restart */}

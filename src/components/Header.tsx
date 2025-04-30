@@ -48,7 +48,6 @@ const productCategories = [
   { name: "Shafts & Rotational Components", path: "/products/shafts-rotational-components" },
   { name: "Bushings & Collars", path: "/products/bushings-collars" },
   { name: "Adapters & Connectors", path: "/products/adapters-connectors" },
-  { name: "Precision Machined Parts", path: "/products/precision-machined-parts" },
 ];
 
 const Header: React.FC = () => {

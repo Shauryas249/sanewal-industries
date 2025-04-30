@@ -38,10 +38,9 @@ const qualityData = [
 ];
 
 const marketShareData = [
-  { name: 'Automotive', value: 45 },
-  { name: 'Industrial', value: 30 },
-  { name: 'Aerospace', value: 15 },
-  { name: 'Others', value: 10 },
+  { name: 'Automotive', value: 50 },
+  { name: 'Industrial', value: 35 },
+  { name: 'Others', value: 15 },
 ];
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -148,8 +147,8 @@ const DataVisualization = ({ title = "Performance Metrics", description }: DataV
               </div>
               <p className="text-sm text-muted-foreground mt-4 text-center max-w-3xl mx-auto">
                 This chart shows our market share across different industries. The automotive 
-                sector represents our largest market at 45%, followed by industrial applications 
-                at 30%.
+                sector represents our largest market at 50%, followed by industrial applications 
+                at 35%.
               </p>
             </TabsContent>
           </Tabs>

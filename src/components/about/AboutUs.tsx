@@ -26,7 +26,7 @@ const AboutUs: React.FC = () => {
     },
     {
       icon: <Users className="h-12 w-12 text-primary" />,
-      value: "100+",
+      value: "200+",
       label: "Team Members"
     },
     {

@@ -20,8 +20,8 @@ const Footer: React.FC = () => {
               <p>Plot no. 253 HSIIDC,</p>
               <p>Rohtak-124001 (Haryana) India</p>
               <p>Pin Code: 124001, HARYANA (INDIA)</p>
-              <p className="mt-2">Phone: <a href="tel:+911262249535" className="hover:text-primary transition-colors">+91-1262-249535</a></p>
-              <p>Email: <a href="mailto:info@sanewalauto.com" className="hover:text-primary transition-colors">info@sanewalauto.com</a></p>
+              <p className="mt-2">Phone: <a href="tel:+919136900001" className="hover:text-primary transition-colors">+91-9136900001</a></p>
+              <p>Email: <a href="mailto:siddharth@sanewalauto.com" className="hover:text-primary transition-colors">siddharth@sanewalauto.com</a></p>
             </address>
           </div>
           

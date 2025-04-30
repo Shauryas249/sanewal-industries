@@ -21,14 +21,14 @@ export default function Contact() {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Phone",
       details: [
-        <a key="phone" href="tel:+911262249535" className="hover:text-primary transition-colors">+91-1262-249535</a>
+        <a key="phone" href="tel:+919136900001" className="hover:text-primary transition-colors">+91-9136900001</a>
       ]
     },
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
       details: [
-        <a key="email" href="mailto:info@sanewalauto.com" className="hover:text-primary transition-colors">info@sanewalauto.com</a>
+        <a key="email" href="mailto:siddharth@sanewalauto.com" className="hover:text-primary transition-colors">siddharth@sanewalauto.com</a>
       ]
     },
     {
@@ -46,7 +46,7 @@ export default function Contact() {
     <>
       <Head>
         <title>Contact Us - Sanewal Auto Engineers</title>
-        <meta name="description" content="Contact Sanewal Auto Engineers at Plot no. 253 HSIIDC, Rohtak-124001 (Haryana) India. Call us at +91-1262-249535 or email info@sanewalauto.com for inquiries about our machined and forged automotive components." />
+        <meta name="description" content="Contact Sanewal Auto Engineers at Plot no. 253 HSIIDC, Rohtak-124001 (Haryana) India. Call us at +91-9136900001 or email siddharth@sanewalauto.com for inquiries about our machined and forged automotive components." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
