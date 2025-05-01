@@ -51,7 +51,7 @@ const GalleryPage: NextPage = () => {
     // New images from CDN
     {
       id: 'quality-control-lab',
-      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/quality-control-lab-26bedbb.jpg',
+      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/qualiity-control-lab-cb622b1.png',
       alt: 'Quality Control Laboratory',
       width: 1200,
       height: 800,
@@ -81,7 +81,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'manufacturing-floor',
-      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/manufacturing-floor-75c7651.jpg',
+      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/production-plant-32169d8.jpg',
       alt: 'Manufacturing Floor',
       width: 1200,
       height: 800,
