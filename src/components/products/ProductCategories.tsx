@@ -166,14 +166,6 @@ const ProductCategories: React.FC = () => {
       description: "Precision-engineered pin for accurate adjustments and alignments",
       imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/adjecting-pin-e5662cc.JPG",
       category: "adapters"
-    },
-
-    // Precision Machined Parts
-    {
-      name: "Pole Shoe 1.5 HP",
-      description: "Specialized component for electric motor applications",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/pole-shoe-1.5-hp-54076a8.jpg",
-      category: "precision"
     }
   ];
 

@@ -68,15 +68,6 @@ const Products: React.FC = () => {
         { name: 'Adjecting Pin', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/adjecting-pin-e5662cc.JPG' }
       ]
     },
-    {
-      id: 6,
-      title: 'Precision Machined Parts',
-      description: 'Custom machined components manufactured with tight tolerances and superior finish.',
-      slug: 'precision-machined-parts',
-      products: [
-        { name: 'Pole Shoe 1.5 HP', imagePath: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/pole-shoe-1.5-hp-54076a8.jpg' }
-      ]
-    },
   ];
 
   return (
