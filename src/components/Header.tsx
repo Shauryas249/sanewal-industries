@@ -120,7 +120,6 @@ const Header: React.FC = () => {
           <NavLink href="/manufacturing" isActive={isActive('/manufacturing')}>Manufacturing</NavLink>
           <NavLink href="/quality" isActive={isActive('/quality')}>Quality</NavLink>
           <NavLink href="/gallery" isActive={isActive('/gallery')}>Gallery</NavLink>
-          <NavLink href="/data" isActive={isActive('/data')}>Data</NavLink>
           <NavLink href="/ethics-compliance" isActive={isActive('/ethics-compliance')}>Ethics & Compliance</NavLink>
           
           <Button 
@@ -278,12 +277,6 @@ const Header: React.FC = () => {
                       className={`flex items-center py-3 px-4 rounded-md ${isActive('/gallery') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
                     >
                       Gallery
-                    </Link>
-                    <Link 
-                      href="/data" 
-                      className={`flex items-center py-3 px-4 rounded-md ${isActive('/data') ? 'bg-primary/10 text-primary' : 'hover:bg-muted'}`}
-                    >
-                      Data
                     </Link>
                     <Link 
                       href="/ethics-compliance" 

@@ -1,16 +1,30 @@
 import { NextPage } from 'next';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import DataVisualization from '@/components/data/DataVisualization';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { AlertTriangle } from 'lucide-react';
 
 const DataPage: NextPage = () => {
+  const router = useRouter();
+
+  // Redirect to homepage after 5 seconds
+  useEffect(() => {
+    const redirectTimer = setTimeout(() => {
+      router.push('/');
+    }, 5000);
+
+    return () => clearTimeout(redirectTimer);
+  }, [router]);
+
   return (
     <>
       <Head>
-        <title>Performance Metrics | Sanewal Auto Engineers</title>
-        <meta name="description" content="Explore our performance metrics and data visualizations at Sanewal Auto Engineers." />
+        <title>Access Restricted | Sanewal Auto Engineers</title>
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
 
       <div className="bg-background min-h-screen flex flex-col">
@@ -18,51 +32,23 @@ const DataPage: NextPage = () => {
         <main className="flex-1 py-12">
           <div className="container mx-auto text-center">
             <div className="max-w-3xl mx-auto mb-8">
-              <h1 className="text-4xl font-bold mb-6">Performance Metrics</h1>
-              <p className="text-lg text-muted-foreground">
-                Explore our key performance indicators and metrics through interactive data visualizations.
-                These charts provide insights into our production volumes, quality metrics, and market presence.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
-              <DataVisualization 
-                title="Production & Quality Metrics" 
-                description="Interactive charts showing our production volumes, quality metrics, and market share"
-              />
-
-              <Card>
+              <Card className="border-destructive/50">
                 <CardHeader className="text-center">
-                  <CardTitle>Understanding Our Metrics</CardTitle>
-                  <CardDescription>Key insights from our performance data</CardDescription>
+                  <div className="mx-auto w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center mb-4">
+                    <AlertTriangle className="h-6 w-6 text-destructive" />
+                  </div>
+                  <CardTitle className="text-2xl">Access Restricted</CardTitle>
+                  <CardDescription>This page is not available for public viewing</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="text-center">
-                    <h3 className="text-lg font-medium mb-2">Production Volume</h3>
-                    <p>
-                      Our production volume data showcases the monthly output across our three main product categories: 
-                      machined components, forged components, and automotive parts. The data demonstrates our 
-                      manufacturing capacity and production trends over time.
-                    </p>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-lg font-medium mb-2">Quality Metrics</h3>
-                    <p>
-                      Quality is at the core of our manufacturing philosophy. Our defect rate trend shows 
-                      continuous improvement in our quality control processes, with defect rates consistently 
-                      below industry standards. This reflects our commitment to delivering high-quality 
-                      components to our customers.
-                    </p>
-                  </div>
-
-                  <div className="text-center">
-                    <h3 className="text-lg font-medium mb-2">Market Share</h3>
-                    <p>
-                      Our market share visualization illustrates our presence across different industry sectors. 
-                      While we maintain a strong focus on automotive components, we have successfully diversified 
-                      into industrial and aerospace applications, demonstrating our versatility and adaptability.
-                    </p>
+                  <p>
+                    The performance metrics and data visualizations are restricted to authorized personnel only.
+                    You will be redirected to the homepage in a few seconds.
+                  </p>
+                  <div className="pt-4">
+                    <Button onClick={() => router.push('/')}>
+                      Return to Homepage
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
