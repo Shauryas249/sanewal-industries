@@ -81,15 +81,16 @@ const Products: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex flex-nowrap overflow-x-auto pb-6 space-x-6 snap-x">
           {productCategories.map((category) => (
-            <ProductCarousel
-              key={category.id}
-              categoryTitle={category.title}
-              categoryDescription={category.description}
-              productImages={category.products}
-              categorySlug={category.slug}
-            />
+            <div key={category.id} className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/5 snap-start">
+              <ProductCarousel
+                categoryTitle={category.title}
+                categoryDescription={category.description}
+                productImages={category.products}
+                categorySlug={category.slug}
+              />
+            </div>
           ))}
         </div>
         

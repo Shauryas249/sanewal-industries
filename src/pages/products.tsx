@@ -3,8 +3,6 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProductCategories from "@/components/products/ProductCategories";
-import TestingEquipment from "@/components/products/TestingEquipment";
-import CoreValues from "@/components/products/CoreValues";
 import Container from "@/components/ui/container";
 
 export default function Products() {
@@ -48,8 +46,6 @@ export default function Products() {
           </Container>
           
           <ProductCategories />
-          <CoreValues />
-          <TestingEquipment />
         </main>
         <Footer />
       </div>

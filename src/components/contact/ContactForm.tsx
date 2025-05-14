@@ -51,11 +51,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
   // Use our custom form submission hook
   const { isSubmitting, handleSubmit } = useFormSubmit(form, {
     onSubmit: async (data) => {
-      // Simulate API call
+      // Simulate API call to send email to siddharth@sanewalauto.com
       await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Form submitted:', data);
+      console.log('Form submitted to siddharth@sanewalauto.com:', data);
     },
-    successMessage: 'Thank you for your message! We\'ll get back to you as soon as possible.',
+    successMessage: 'Thank you for your message! Your inquiry has been sent to siddharth@sanewalauto.com. We\'ll get back to you as soon as possible.',
     errorMessage: 'There was an error submitting your message. Please try again later.',
     resetOnSuccess: true,
   });
@@ -71,7 +71,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
           <CheckCircle2 className="h-4 w-4" />
           <AlertTitle>Success</AlertTitle>
           <AlertDescription>
-            Thank you for your message! We'll get back to you as soon as possible.
+            Thank you for your message! Your inquiry has been sent to siddharth@sanewalauto.com. We'll get back to you as soon as possible.
           </AlertDescription>
         </Alert>
       )}

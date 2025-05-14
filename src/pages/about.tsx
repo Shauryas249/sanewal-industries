@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AboutUs from '@/components/about/AboutUs';
+import CoreValues from '@/components/products/CoreValues';
 
 const About: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const About: NextPage = () => {
         <Header />
         <main className="flex-1">
           <AboutUs />
+          <CoreValues />
         </main>
         <Footer />
       </div>
