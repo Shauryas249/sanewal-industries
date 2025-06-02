@@ -113,6 +113,13 @@ const TestingEquipment: React.FC = () => {
           image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/salt-spray-test-chamber-c806302.jpg',
           alt: 'Salt Spray Test Chamber for accelerated corrosion testing in controlled environments'
         },
+        { 
+          id: 6, 
+          name: 'MPI Machine', 
+          description: 'Magnetic Particle Inspection equipment for detecting surface and near-surface discontinuities in ferromagnetic materials',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/mpi-machine-50e0eaf.jpg',
+          alt: 'MPI Machine - Magnetic Particle Inspection equipment for detecting discontinuities in ferromagnetic materials'
+        },
       ],
     },
     {
@@ -142,6 +149,40 @@ const TestingEquipment: React.FC = () => {
         },
       ],
     },
+    {
+      id: 'sample-preparation',
+      name: 'Sample Preparation Equipment',
+      equipment: [
+        { 
+          id: 1, 
+          name: 'Double Disc Polishing Machine', 
+          description: 'High-precision polishing system for achieving mirror-finish surfaces on metallographic samples',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/double-disc-polishing-machine-b983626.jpg',
+          alt: 'Double Disc Polishing Machine - High-precision polishing system for metallographic samples'
+        },
+        { 
+          id: 2, 
+          name: 'Touch Screen Hot Mounting Press', 
+          description: 'Automated mounting press with digital temperature and pressure control for sample preparation',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/touch-screen-hot-mounting-press-36c712a.jpg',
+          alt: 'Touch Screen Hot Mounting Press - Automated mounting press with digital controls for sample preparation'
+        },
+        { 
+          id: 3, 
+          name: 'Abrasive Belt Grinder', 
+          description: 'Variable speed belt grinding system for rough and fine grinding of metallographic specimens',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/abrasive-belt-grinder-7aaf2cf.jpg',
+          alt: 'Abrasive Belt Grinder - Variable speed belt grinding system for metallographic specimens'
+        },
+        { 
+          id: 4, 
+          name: 'Abrasive Cut Off Machine', 
+          description: 'Precision cutting machine for sectioning hard materials with minimal sample damage',
+          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/abrasive-cut-off-machine-6b64a6d.jpg',
+          alt: 'Abrasive Cut Off Machine - Precision cutting machine for sectioning hard materials with minimal damage'
+        },
+      ],
+    },
   ];
 
   return (
@@ -156,7 +197,7 @@ const TestingEquipment: React.FC = () => {
         </div>
         
         <Tabs defaultValue="measurement" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {equipmentCategories.map((category) => (
               <TabsTrigger key={category.id} value={category.id}>
                 {category.name}
