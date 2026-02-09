@@ -24,103 +24,103 @@ const Clients: React.FC = () => {
     { 
       id: 1, 
       name: 'Greaves Cotton', 
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/greaves-cotton-98683b0.png' 
+      logo: '/images/Greaves-Cotton.png' 
     },
     { 
       id: 2, 
       name: 'Sonalika Tractors', 
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/sonalika-tractors-23786b4.png' 
+      logo: '/images/Sonalika-Tractors.png' 
     },
     { 
       id: 3, 
       name: 'New Holland', 
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/new-holland-ccd1e69.png' 
+      logo: '/images/New-Holland.png' 
     },
     { 
       id: 4, 
       name: 'Hero MotoCorp', 
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/hero-moto-corp-e2ec2e5.png' 
+      logo: '/images/Hero-Moto-corp.png' 
     },
     // New client logos
     {
       id: 5,
       name: 'Sundaram Fasteners',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/sundaram-fasteners-6fb5e8c.png'
+      logo: '/images/sundaram-fasteners.png'
     },
     {
       id: 6,
       name: 'Kohli Rubber Moulds',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/kohli-rubber-moulds-733e54a.jpg'
+      logo: '/images/Kohli-rubber-moulds.jpg'
     },
     {
       id: 7,
       name: 'Bajajson',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/bajajson-logo-770dbe7.png'
+      logo: '/images/bajajsons-limited.png'
     },
     {
       id: 8,
       name: 'Sansera Engineering',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/sansera-engineering-f1e6906.png'
+      logo: '/images/Sansera-engineering.png'
     },
     {
       id: 9,
       name: 'Sandhar Ltd',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/sandhar-ltd-4248cdc.png'
+      logo: '/images/Sandhar-ltd.png'
     },
     {
       id: 10,
       name: 'Rockman Ltd',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rockman-ltd-6c18783.png'
+      logo: '/images/Rockman-ltd.png'
     },
     {
       id: 11,
       name: 'Anand Motor Ltd',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/anand-motor-ltd.-5f7dde3.png'
+      logo: '/images/Anand-Motor-ltd.png'
     },
     {
       id: 12,
       name: 'New Swan',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/new-swan-1d7227c.png'
+      logo: '/images/New-Swan.png'
     },
     {
       id: 13,
       name: 'ASK Automotive',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/ask-automotive-1255683.png'
+      logo: '/images/Ask-Automotive.png'
     },
     {
       id: 14,
       name: 'Rico Auto Industries',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rico-auto-industries-cd2c37c.jpg'
+      logo: '/images/Rico-Auto-Industries.jpg'
     },
     {
       id: 15,
       name: 'Life Long India',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/life-long-india-752545d.png'
+      logo: '/images/Life-Long-India.png'
     },
     {
       id: 16,
       name: 'AG Industries',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/ag-industries-773c153.png'
+      logo: '/images/AG-Industries.png'
     },
     {
       id: 17,
       name: 'Shigan Quantum',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/shigan-quantum-5baf3e0.png'
+      logo: '/images/Shigan-Quantum.png'
     },
     {
       id: 18,
       name: 'Pheon Autotech',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/pheon-autotech-74ff541.jpg'
+      logo: '/images/Pheon-Autotech.jpg'
     },
     {
       id: 19,
       name: 'Endurance Technology Limited',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/endurance-technology-limited-61b061e.png'
+      logo: '/images/Endurance-Technology-Limited.png'
     },
     {
       id: 20,
       name: 'Munjal Showa',
-      logo: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/munjal-showa-59ce88a.png'
+      logo: '/images/Munjal-Showa.png'
     }
   ];
 

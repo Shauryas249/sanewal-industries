@@ -16,32 +16,32 @@ export default function FastenersConnectors() {
     {
       name: "Stud Hood",
       description: "High-strength stud for hood mounting and secure fastening",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/stud-hood-addf197.jpg"
+      imagePath: "/images/Stud-Hood.jpg"
     },
     {
       name: "Lock Nut",
       description: "Self-locking nut designed to prevent loosening under vibration",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/lock-nut-63b57c6.jpg"
+      imagePath: "/images/Lock-Nut.jpg"
     },
     {
       name: "Steering Head Nut",
       description: "Specialized nut for steering column assembly and adjustment",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/steering-head-nut-0f81599.jpg"
+      imagePath: "/images/Steering-Head-Nut.jpg"
     },
     {
       name: "Fork Bolt",
       description: "High-strength bolt for suspension fork assembly",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/fork-bolt-cfbf3a0.jpg"
+      imagePath: "/images/Fork-Bolt.jpg"
     },
     {
       name: "Banjo Bolt M12",
       description: "Hollow bolt designed for fluid passage in brake and fuel systems",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/banjo-bolt-m12-fe403f2.jpg"
+      imagePath: "/images/Banjo-Bolt-M12.jpg"
     },
     {
       name: "Banjo Bolt M22",
       description: "Heavy-duty hollow bolt for high-pressure fluid systems",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/banjo-bolt-m22-db254d4.jpg"
+      imagePath: "/images/Banjo-Bolt-M22.jpg"
     }
   ];
 

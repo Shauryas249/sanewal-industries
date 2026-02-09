@@ -18,7 +18,7 @@ const Facilities: React.FC = () => {
           <Card className="overflow-hidden">
             <div className="relative h-64 w-full">
               <Image 
-                src="https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/production-plant-32169d8.jpg"
+                src="/images/Production-Plant.jpg"
                 alt="Interior view of Sanewal Auto Engineers' main production facility with precision machining equipment"
                 fill
                 className="object-cover"
@@ -36,7 +36,7 @@ const Facilities: React.FC = () => {
           <Card className="overflow-hidden">
             <div className="relative h-64 w-full">
               <Image 
-                src="https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/qualiity-control-lab-cb622b1.png"
+                src="/images/Quality-control-lab.jpg"
                 alt="Advanced quality control laboratory with measurement and testing equipment for automotive components"
                 fill
                 className="object-cover"

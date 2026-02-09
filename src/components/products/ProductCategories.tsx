@@ -24,37 +24,37 @@ const ProductCategories: React.FC = () => {
     {
       name: "Stud Hood",
       description: "High-strength stud for hood mounting and secure fastening",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/stud-hood-addf197.jpg",
+      imagePath: "/images/Stud-Hood.jpg",
       category: "fasteners"
     },
     {
       name: "Lock Nut",
       description: "Self-locking nut designed to prevent loosening under vibration",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/lock-nut-63b57c6.jpg",
+      imagePath: "/images/Lock-Nut.jpg",
       category: "fasteners"
     },
     {
       name: "Steering Head Nut",
       description: "Specialized nut for steering column assembly and adjustment",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/steering-head-nut-0f81599.jpg",
+      imagePath: "/images/Steering-Head-Nut.jpg",
       category: "fasteners"
     },
     {
       name: "Fork Bolt",
       description: "High-strength bolt for suspension fork assembly",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/fork-bolt-cfbf3a0.jpg",
+      imagePath: "/images/Fork-Bolt.jpg",
       category: "fasteners"
     },
     {
       name: "Banjo Bolt M12",
       description: "Hollow bolt designed for fluid passage in brake and fuel systems",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/banjo-bolt-m12-fe403f2.jpg",
+      imagePath: "/images/Banjo-Bolt-M12.jpg",
       category: "fasteners"
     },
     {
       name: "Banjo Bolt M22",
       description: "Heavy-duty hollow bolt for high-pressure fluid systems",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/banjo-bolt-m22-db254d4.jpg",
+      imagePath: "/images/Banjo-Bolt-M22.jpg",
       category: "fasteners"
     },
 
@@ -62,31 +62,31 @@ const ProductCategories: React.FC = () => {
     {
       name: "Primary Piston",
       description: "High-performance piston for primary hydraulic systems",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/primary-piston-8615fa2.jpg",
+      imagePath: "/images/Primary-Piston.jpg",
       category: "pistons"
     },
     {
       name: "Rear Piston",
       description: "Specialized piston for rear brake or hydraulic applications",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rear-piston-094b9f4.jpg",
+      imagePath: "/images/Rear-Piston.jpg",
       category: "pistons"
     },
     {
       name: "De-compression FCU",
       description: "Engine decompression mechanism for fluid control units",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/de-compression-fcu-42751cb.jpg",
+      imagePath: "/images/De-compression-FCU.jpg",
       category: "pistons"
     },
     {
       name: "Oil Lock Coller K60",
       description: "Specialized collar for oil sealing in hydraulic systems",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/oil-lock-coller-k60-ec0efa4.jpg",
+      imagePath: "/images/Oil-Lock-Coller-K60.jpg",
       category: "pistons"
     },
     {
       name: "Oil Lock Coller",
       description: "Standard oil lock collar for hydraulic applications",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/oil-lock-coller-dee7174.jpg",
+      imagePath: "/images/Oil-Lock-Coller.jpg",
       category: "pistons"
     },
 
@@ -94,25 +94,25 @@ const ProductCategories: React.FC = () => {
     {
       name: "Spline Gear Shaft",
       description: "Specialized shaft with spline profile for power transmission",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/spline-gear-shaft-c36056e.jpg",
+      imagePath: "/images/Spline-Gear-Shaft.jpg",
       category: "shafts"
     },
     {
       name: "Pin Sector 10x64",
       description: "Precision pin for sector gear applications",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/pin-sector-10x64-d67bd4c.jpg",
+      imagePath: "/images/Pin-Sector-10x64.jpg",
       category: "shafts"
     },
     {
       name: "Rotor Shaft Alternator",
       description: "Precision-machined shaft for optimal alternator performance",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rotor-shaft-alternator-ac35dfb.jpg",
+      imagePath: "/images/Rotor-Shaft-Alternator.jpg",
       category: "shafts"
     },
     {
       name: "Pin Gear Shift 28G20",
       description: "Specialized pin for gear shift mechanisms",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/pin-gear-shift-28g20-3a852dc.jpg",
+      imagePath: "/images/Pin-Gear-Shift-28G20.jpg",
       category: "shafts"
     },
 
@@ -120,25 +120,25 @@ const ProductCategories: React.FC = () => {
     {
       name: "Bush Pinion",
       description: "Specialized bushing for pinion gear applications",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/bush-pinion-3c875dc.jpg",
+      imagePath: "/images/Bush-Pinion.jpg",
       category: "bushings"
     },
     {
       name: "Coller 9MM",
       description: "Standard 9mm collar for various applications",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coller-c5314e2.jpg",
+      imagePath: "/images/Coller.jpg",
       category: "bushings"
     },
     {
       name: "Coller Shift",
       description: "Specialized collar for shift mechanisms",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coller-shift-1e3b60e.jpg",
+      imagePath: "/images/Coller-Shift.jpg",
       category: "bushings"
     },
     {
       name: "Coller Wheel Side",
       description: "Wheel-side collar for automotive applications",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coller-wheel-side-fe351bd.jpg",
+      imagePath: "/images/Coller-Wheel-Side.jpg",
       category: "bushings"
     },
 
@@ -146,25 +146,25 @@ const ProductCategories: React.FC = () => {
     {
       name: "Upper Case",
       description: "Precision-engineered housing for automotive components",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/upper-case-55386fb.jpg",
+      imagePath: "/images/Upper-Case.jpg",
       category: "adapters"
     },
     {
       name: "Inner Pole",
       description: "Specialized connector for electrical components",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/inner-pole-a28eae1.jpg",
+      imagePath: "/images/Inner-Pole.jpg",
       category: "adapters"
     },
     {
       name: "Plug",
       description: "Sealing plug for fluid systems",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/plug-5ca7560.jpg",
+      imagePath: "/images/Plug.jpg",
       category: "adapters"
     },
     {
       name: "Adjecting Pin",
       description: "Precision-engineered pin for accurate adjustments and alignments",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/adjecting-pin-e5662cc.JPG",
+      imagePath: "/images/Adjecting-Pin.JPG",
       category: "adapters"
     }
   ];

@@ -24,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({
   title = 'Sanewal Auto Engineers - Precision Automotive Components',
   description = 'Sanewal Auto Engineers manufactures high-quality precision automotive components with IATF 16949:2016 & ISO 14001:2015 certification.',
   keywords = 'automotive components, precision engineering, machined components, forged components',
-  ogImage = 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/sanewal-og-image.jpg',
+  ogImage = '/images/sanewal-og-image.jpg',
 }) => {
   const fullTitle = title.includes('Sanewal Auto Engineers') 
     ? title 

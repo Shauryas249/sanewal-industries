@@ -12,7 +12,7 @@ const metadata = {
   title: "Sanewal Auto Engineers - Precision Automotive Components",
   description: "IATF 16949:2016 & ISO 14001:2015 certified company engaged in manufacturing of Machined/Forged Components for the automotive industry. Contact us at Plot no. 253 HSIIDC, Rohtak-124001, Haryana, India or call +91-1262-249535.",
   keywords: "automotive components, precision engineering, machined components, forged components, IATF 16949, ISO 14001",
-  ogImage: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/sanewal-og-image.jpg"
+  ogImage: "/images/sanewal-og-image.jpg"
 };
 
 export default function Home() {

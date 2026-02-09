@@ -14,28 +14,28 @@ const TestingEquipment: React.FC = () => {
           id: 1, 
           name: 'Micrometers', 
           description: 'Precision measurement tools for accurate dimensional analysis',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/micrometer-c7aaee1.jpg',
+          image: '/images/micrometer.jpg',
           alt: 'Micrometers - Precision measurement tools for dimensional analysis'
         },
         { 
           id: 2, 
           name: 'Vernier Calipers', 
           description: 'For measuring internal and external dimensions with high precision',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/vernier-caliper-6fabfeb.jpg',
+          image: '/images/vernier-caliper.jpg',
           alt: 'Vernier Calipers - High precision measuring tool for internal and external dimensions'
         },
         { 
           id: 3, 
           name: 'Height Gauge', 
           description: 'For precise height measurements and scribing operations',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/height-gauge-4837fac.jpg',
+          image: '/images/height-gauge.jpg',
           alt: 'Height Gauge - Precision tool for height measurements and scribing operations'
         },
         { 
           id: 4, 
           name: 'Contour Measurement Contracer', 
           description: 'For precise measurement and analysis of complex contours and surface profiles',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/contour-measurement-contracer-9acbc52.jpg',
+          image: '/images/Contour-Measurement-Contracer.jpg',
           alt: 'Contour Measurement Contracer - Precision device for measuring complex surface profiles'
         },
       ],
@@ -48,28 +48,28 @@ const TestingEquipment: React.FC = () => {
           id: 1, 
           name: 'Profile Projector', 
           description: 'For inspecting complex profiles and geometric dimensions',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/profile-projector-673ad9c.png',
+          image: '/images/profile-projector.png',
           alt: 'Profile Projector - For inspecting complex profiles and geometric dimensions'
         },
         { 
           id: 2, 
           name: 'Magnascope', 
           description: 'For detailed surface inspection and analysis',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/magnascope-4638d63.png',
+          image: '/images/magnascope.png',
           alt: 'Magnascope - For detailed surface inspection and analysis'
         },
         { 
           id: 3, 
           name: 'Metallurgical Microscope', 
           description: 'For microstructure analysis of materials',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/metallurgical-microscope-d285bc3.png',
+          image: '/images/metallurgical-microscope.png',
           alt: 'Metallurgical Microscope - For microstructure analysis of materials'
         },
         { 
           id: 4, 
           name: 'Trinocular Stereozoom Microscope', 
           description: 'For detailed 3D inspection of components',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/trinocular-stereozoom-microscope-325c15b.png',
+          image: '/images/trinocular-stereozoom-microscope.png',
           alt: 'Trinocular Stereozoom Microscope - For detailed 3D inspection of components'
         },
       ],
@@ -82,42 +82,42 @@ const TestingEquipment: React.FC = () => {
           id: 1, 
           name: 'Roughness Tester', 
           description: 'For measuring surface texture and finish quality',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/roughness-tester-2654181.png',
+          image: '/images/roughness-tester.png',
           alt: 'Roughness Tester - For measuring surface texture and finish quality'
         },
         { 
           id: 2, 
           name: 'Micro Vickers Hardness Tester', 
           description: 'For precise hardness testing of materials',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/micro-vickers-hardness-tester-dc588b3.png',
+          image: '/images/micro-vickers-hardness-tester.png',
           alt: 'Micro Vickers Hardness Tester - For precise hardness testing of materials'
         },
         { 
           id: 3, 
           name: 'Rockwell Hardness Tester', 
           description: 'For evaluating material hardness properties',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rockwell-hardness-tester-344992d.png',
+          image: '/images/rockwell-hardness-tester.png',
           alt: 'Rockwell Hardness Tester - For evaluating material hardness properties'
         },
         { 
           id: 4, 
           name: 'Coating Thickness Testers', 
           description: 'For measuring the thickness of surface coatings',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coating-thickness-tester-0c3d714.png',
+          image: '/images/coating-thickness-tester.png',
           alt: 'Coating Thickness Testers - For measuring the thickness of surface coatings'
         },
         { 
           id: 5, 
           name: 'SST Chamber', 
           description: 'For accelerated corrosion testing in salt spray environments to evaluate material durability',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/salt-spray-test-chamber-c806302.jpg',
+          image: '/images/Salt-Spray-Test-Chamber.jpg',
           alt: 'Salt Spray Test Chamber for accelerated corrosion testing in controlled environments'
         },
         { 
           id: 6, 
           name: 'MPI Machine', 
           description: 'Magnetic Particle Inspection equipment for detecting surface and near-surface discontinuities in ferromagnetic materials',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/mpi-machine-50e0eaf.jpg',
+          image: '/images/magneetic-particle-inpector.jpg',
           alt: 'MPI Machine - Magnetic Particle Inspection equipment for detecting discontinuities in ferromagnetic materials'
         },
       ],
@@ -130,21 +130,21 @@ const TestingEquipment: React.FC = () => {
           id: 1, 
           name: 'Laser Marking Machine', 
           description: 'For permanent identification and traceability marking',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/laser-marking-machine-34f7d05.png',
+          image: '/images/laser-marking-machine.png',
           alt: 'Laser Marking Machine - For permanent identification and traceability marking'
         },
         { 
           id: 2, 
           name: 'Leakage Testing Machine', 
           description: 'For verifying seal integrity and detecting leaks',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/leakage-testing-machine-3abe856.png',
+          image: '/images/leakage-testing-machine.png',
           alt: 'Leakage Testing Machine - For verifying seal integrity and detecting leaks'
         },
         { 
           id: 3, 
           name: 'Magnetic Crack Detector', 
           description: 'For non-destructive detection of surface and subsurface flaws in ferromagnetic materials',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/magnetic-crack-detector-5dfd88b.jpg',
+          image: '/images/Magnetic-Crack-Detector.jpg',
           alt: 'Magnetic Crack Detector with U-shaped yoke for non-destructive flaw detection in ferromagnetic materials'
         },
       ],
@@ -157,28 +157,28 @@ const TestingEquipment: React.FC = () => {
           id: 1, 
           name: 'Double Disc Polishing Machine', 
           description: 'High-precision polishing system for achieving mirror-finish surfaces on metallographic samples',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/double-disc-polishing-machine-b983626.jpg',
+          image: '/images/dual-disc-polishing-machine.jpg',
           alt: 'Double Disc Polishing Machine - High-precision polishing system for metallographic samples'
         },
         { 
           id: 2, 
           name: 'Touch Screen Hot Mounting Press', 
           description: 'Automated mounting press with digital temperature and pressure control for sample preparation',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/touch-screen-hot-mounting-press-36c712a.jpg',
+          image: '/images/hot-mounting-press.jpg',
           alt: 'Touch Screen Hot Mounting Press - Automated mounting press with digital controls for sample preparation'
         },
         { 
           id: 3, 
           name: 'Abrasive Belt Grinder', 
           description: 'Variable speed belt grinding system for rough and fine grinding of metallographic specimens',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/abrasive-belt-grinder-7aaf2cf.jpg',
+          image: '/images/Abrasive-belt-grinder.jpg',
           alt: 'Abrasive Belt Grinder - Variable speed belt grinding system for metallographic specimens'
         },
         { 
           id: 4, 
           name: 'Abrasive Cut Off Machine', 
           description: 'Precision cutting machine for sectioning hard materials with minimal sample damage',
-          image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/abrasive-cut-off-machine-6b64a6d.jpg',
+          image: '/images/abrasive-cut-off-machine.jpg',
           alt: 'Abrasive Cut Off Machine - Precision cutting machine for sectioning hard materials with minimal damage'
         },
       ],

@@ -16,22 +16,22 @@ export default function ShaftsRotationalComponents() {
     {
       name: "Spline Gear Shaft",
       description: "Specialized shaft with spline profile for power transmission",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/spline-gear-shaft-c36056e.jpg"
+      imagePath: "/images/Spline-Gear-Shaft.jpg"
     },
     {
       name: "Pin Sector 10x64",
       description: "Precision pin for sector gear applications",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/pin-sector-10x64-d67bd4c.jpg"
+      imagePath: "/images/Pin-Sector-10x64.jpg"
     },
     {
       name: "Rotor Shaft Alternator",
       description: "Precision-machined shaft for optimal alternator performance",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rotor-shaft-alternator-ac35dfb.jpg"
+      imagePath: "/images/Rotor-Shaft-Alternator.jpg"
     },
     {
       name: "Pin Gear Shift 28G20",
       description: "Specialized pin for gear shift mechanisms",
-      imagePath: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/pin-gear-shift-28g20-3a852dc.jpg"
+      imagePath: "/images/Pin-Gear-Shift-28G20.jpg"
     }
   ];
 

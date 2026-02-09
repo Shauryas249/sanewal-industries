@@ -11,25 +11,25 @@ const TestingEquipment: React.FC = () => {
     {
       name: "Roughness Tester",
       description: "For measuring surface texture and finish quality",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/roughness-tester-2654181.png",
+      image: "/images/roughness-tester.png",
       alt: "Roughness Tester - For measuring surface texture and finish quality"
     },
     {
       name: "Micro Vickers Hardness Tester",
       description: "For precise hardness testing of materials",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/micro-vickers-hardness-tester-dc588b3.png",
+      image: "/images/micro-vickers-hardness-tester.png",
       alt: "Micro Vickers Hardness Tester - For precise hardness testing of materials"
     },
     {
       name: "Rockwell Hardness Tester",
       description: "For evaluating material hardness properties",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/rockwell-hardness-tester-344992d.png",
+      image: "/images/rockwell-hardness-tester.png",
       alt: "Rockwell Hardness Tester - For evaluating material hardness properties"
     },
     {
       name: "Coating Thickness Testers",
       description: "For measuring the thickness of surface coatings",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/coating-thickness-tester-0c3d714.png",
+      image: "/images/coating-thickness-tester.png",
       alt: "Coating Thickness Testers - For measuring the thickness of surface coatings"
     }
   ];
@@ -38,13 +38,13 @@ const TestingEquipment: React.FC = () => {
     {
       name: "Laser Marking Machine",
       description: "For permanent identification and traceability marking",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/laser-marking-machine-34f7d05.png",
+      image: "/images/laser-marking-machine.png",
       alt: "Laser Marking Machine - For permanent identification and traceability marking"
     },
     {
       name: "Leakage Testing Machine",
       description: "For verifying seal integrity and detecting leaks",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/leakage-testing-machine-3abe856.png",
+      image: "/images/leakage-testing-machine.png",
       alt: "Leakage Testing Machine - For verifying seal integrity and detecting leaks"
     }
   ];
@@ -53,19 +53,19 @@ const TestingEquipment: React.FC = () => {
     {
       name: "Micrometers",
       description: "Precision measurement tools for accurate dimensional analysis",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/micrometer-c7aaee1.jpg",
+      image: "/images/micrometer.jpg",
       alt: "Micrometers - Precision measurement tools for dimensional analysis"
     },
     {
       name: "Vernier Calipers",
       description: "For measuring internal and external dimensions with high precision",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/vernier-caliper-6fabfeb.jpg",
+      image: "/images/vernier-caliper.jpg",
       alt: "Vernier Calipers - High precision measuring tool for internal and external dimensions"
     },
     {
       name: "Height Gauge",
       description: "For precise height measurements and scribing operations",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/height-gauge-4837fac.jpg",
+      image: "/images/height-gauge.jpg",
       alt: "Height Gauge - Precision tool for height measurements and scribing operations"
     }
   ];
@@ -74,25 +74,25 @@ const TestingEquipment: React.FC = () => {
     {
       name: "Profile Projector",
       description: "For inspecting complex profiles and geometric dimensions",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/profile-projector-673ad9c.png",
+      image: "/images/profile-projector.png",
       alt: "Profile Projector - For inspecting complex profiles and geometric dimensions"
     },
     {
       name: "Magnascope",
       description: "For detailed surface inspection and analysis",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/magnascope-4638d63.png",
+      image: "/images/magnascope.png",
       alt: "Magnascope - For detailed surface inspection and analysis"
     },
     {
       name: "Metallurgical Microscope",
       description: "For microstructure analysis of materials",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/metallurgical-microscope-d285bc3.png",
+      image: "/images/metallurgical-microscope.png",
       alt: "Metallurgical Microscope - For microstructure analysis of materials"
     },
     {
       name: "Trinocular Stereozoom Microscope",
       description: "For detailed 3D inspection of components",
-      image: "https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/trinocular-stereozoom-microscope-325c15b.png",
+      image: "/images/trinocular-stereozoom-microscope.png",
       alt: "Trinocular Stereozoom Microscope - For detailed 3D inspection of components"
     }
   ];

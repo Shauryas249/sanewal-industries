@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
   const slides: HeroSlide[] = [
     {
       id: 1,
-      image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/automotive-engineering-excellence-6ec63a8.jpg',
+      image: '/images/Hero 1.jpg',
       alt: 'Automotive engineering excellence',
       title: 'Excellence in Automotive Components',
       subtitle: 'Committed to customer satisfaction through Continual improvement in Quality & Production',
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
     },
     {
       id: 2,
-      image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/precision-manufacturing-process-61d1b3b.jpg',
+      image: '/images/Hero 2.jpg',
       alt: 'Precision manufacturing process',
       title: 'Precision Engineering',
       subtitle: 'IATF 16949:2016 & ISO 14001:2015 Certified manufacturing for over 40 years',
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
     },
     {
       id: 3,
-      image: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/quality-assurance-in-action-c94444f.jpg',
+      image: '/images/Hero 3.jpg',
       alt: 'Quality assurance in action',
       title: 'Quality Assurance',
       subtitle: 'Rigorous testing and quality control for every component we produce',

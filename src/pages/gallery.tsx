@@ -10,7 +10,7 @@ const GalleryPage: NextPage = () => {
   const galleryImages: GalleryImage[] = [
     {
       id: 'precision-machined-components',
-      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/precision-machined-components-7dc497c.jpg',
+      src: '/images/Precision-Machined-Components.jpg',
       alt: 'High-precision machined automotive fasteners and components',
       width: 1200,
       height: 800,
@@ -20,7 +20,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'forged-automotive-components',
-      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/forged-automotive-components-b0e3599.jpg',
+      src: '/images/Forged-Automotive-Components.jpg',
       alt: 'Durable forged metal components for high-stress automotive applications',
       width: 1200,
       height: 800,
@@ -30,7 +30,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'automotive-parts',
-      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/automotive-parts-30c34e8.jpg',
+      src: '/images/Automotive-Parts.jpg',
       alt: 'Specialized automotive components engineered for performance and reliability',
       width: 1200,
       height: 800,
@@ -40,7 +40,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'custom-solutions',
-      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/custom-solutions-76236e8.jpg',
+      src: '/images/Custom-engineered-solutions.jpg',
       alt: 'Tailored engineering solutions for specific automotive requirements',
       width: 1200,
       height: 800,
@@ -51,7 +51,7 @@ const GalleryPage: NextPage = () => {
     // New images from CDN
     {
       id: 'quality-control-lab',
-      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/qualiity-control-lab-cb622b1.png',
+      src: '/images/Quality-control-lab.jpg',
       alt: 'Quality Control Laboratory',
       width: 1200,
       height: 800,
@@ -61,7 +61,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'warehouse-facility',
-      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/warehouse-facility-07a927b.jpg',
+      src: '/images/Warehouse-Facility.jpg',
       alt: 'Warehouse Facility',
       width: 1200,
       height: 800,
@@ -71,7 +71,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'assembly-line',
-      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/assembly-line-faa4090.jpg',
+      src: '/images/Assembly-Line.jpg',
       alt: 'Assembly Line',
       width: 1200,
       height: 800,
@@ -81,7 +81,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'manufacturing-floor',
-      src: 'https://assets.co.dev/b35f6e55-a561-4256-b736-a57e2dc1ec82/production-plant-32169d8.jpg',
+      src: '/images/Production-Plant.jpg',
       alt: 'Manufacturing Floor',
       width: 1200,
       height: 800,
