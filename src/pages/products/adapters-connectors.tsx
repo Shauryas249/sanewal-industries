@@ -16,22 +16,22 @@ export default function AdaptersConnectors() {
     {
       name: "Upper Case",
       description: "Precision-engineered housing for automotive components",
-      imagePath: "/images/Upper-Case.jpg"
+      imagePath: "/images/upper-case.jpg"
     },
     {
       name: "Inner Pole",
       description: "Specialized connector for electrical components",
-      imagePath: "/images/Inner-Pole.jpg"
+      imagePath: "/images/inner-pole.jpg"
     },
     {
       name: "Plug",
       description: "Sealing plug for fluid systems",
-      imagePath: "/images/Plug.jpg"
+      imagePath: "/images/plug.jpg"
     },
     {
       name: "Adjecting Pin",
       description: "Precision-engineered pin for accurate adjustments and alignments",
-      imagePath: "/images/Adjecting-Pin.JPG"
+      imagePath: "/images/adjecting-pin.jpg"
     }
   ];
 

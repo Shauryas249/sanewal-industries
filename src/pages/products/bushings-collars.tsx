@@ -16,22 +16,22 @@ export default function BushingsCollars() {
     {
       name: "Bush Pinion",
       description: "Specialized bushing for pinion gear applications",
-      imagePath: "/images/Bush-Pinion.jpg"
+      imagePath: "/images/bush-pinion.jpg"
     },
     {
       name: "Coller 9MM",
       description: "Standard 9mm collar for various applications",
-      imagePath: "/images/Coller.jpg"
+      imagePath: "/images/coller.jpg"
     },
     {
       name: "Coller Shift",
       description: "Specialized collar for shift mechanisms",
-      imagePath: "/images/Coller-Shift.jpg"
+      imagePath: "/images/coller-shift.jpg"
     },
     {
       name: "Coller Wheel Side",
       description: "Wheel-side collar for automotive applications",
-      imagePath: "/images/Coller-Wheel-Side.jpg"
+      imagePath: "/images/coller-wheel-side.jpg"
     }
   ];
 

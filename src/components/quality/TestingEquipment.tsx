@@ -35,7 +35,7 @@ const TestingEquipment: React.FC = () => {
           id: 4, 
           name: 'Contour Measurement Contracer', 
           description: 'For precise measurement and analysis of complex contours and surface profiles',
-          image: '/images/Contour-Measurement-Contracer.jpg',
+          image: '/images/contour-measurement-contracer.jpg',
           alt: 'Contour Measurement Contracer - Precision device for measuring complex surface profiles'
         },
       ],
@@ -110,7 +110,7 @@ const TestingEquipment: React.FC = () => {
           id: 5, 
           name: 'SST Chamber', 
           description: 'For accelerated corrosion testing in salt spray environments to evaluate material durability',
-          image: '/images/Salt-Spray-Test-Chamber.jpg',
+          image: '/images/salt-spray-test-chamber.jpg',
           alt: 'Salt Spray Test Chamber for accelerated corrosion testing in controlled environments'
         },
         { 
@@ -144,7 +144,7 @@ const TestingEquipment: React.FC = () => {
           id: 3, 
           name: 'Magnetic Crack Detector', 
           description: 'For non-destructive detection of surface and subsurface flaws in ferromagnetic materials',
-          image: '/images/Magnetic-Crack-Detector.jpg',
+          image: '/images/magnetic-crack-detector.jpg',
           alt: 'Magnetic Crack Detector with U-shaped yoke for non-destructive flaw detection in ferromagnetic materials'
         },
       ],
@@ -171,7 +171,7 @@ const TestingEquipment: React.FC = () => {
           id: 3, 
           name: 'Abrasive Belt Grinder', 
           description: 'Variable speed belt grinding system for rough and fine grinding of metallographic specimens',
-          image: '/images/Abrasive-belt-grinder.jpg',
+          image: '/images/abrasive-belt-grinder.jpg',
           alt: 'Abrasive Belt Grinder - Variable speed belt grinding system for metallographic specimens'
         },
         { 

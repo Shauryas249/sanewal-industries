@@ -10,7 +10,7 @@ const GalleryPage: NextPage = () => {
   const galleryImages: GalleryImage[] = [
     {
       id: 'precision-machined-components',
-      src: '/images/Precision-Machined-Components.jpg',
+      src: '/images/precision-machined-components.jpg',
       alt: 'High-precision machined automotive fasteners and components',
       width: 1200,
       height: 800,
@@ -20,7 +20,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'forged-automotive-components',
-      src: '/images/Forged-Automotive-Components.jpg',
+      src: '/images/forged-automotive-components.jpg',
       alt: 'Durable forged metal components for high-stress automotive applications',
       width: 1200,
       height: 800,
@@ -30,7 +30,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'automotive-parts',
-      src: '/images/Automotive-Parts.jpg',
+      src: '/images/automotive-parts.jpg',
       alt: 'Specialized automotive components engineered for performance and reliability',
       width: 1200,
       height: 800,
@@ -40,7 +40,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'custom-solutions',
-      src: '/images/Custom-engineered-solutions.jpg',
+      src: '/images/custom-engineered-solutions.jpg',
       alt: 'Tailored engineering solutions for specific automotive requirements',
       width: 1200,
       height: 800,
@@ -51,7 +51,7 @@ const GalleryPage: NextPage = () => {
     // New images from CDN
     {
       id: 'quality-control-lab',
-      src: '/images/Quality-control-lab.jpg',
+      src: '/images/quality-control-lab.jpg',
       alt: 'Quality Control Laboratory',
       width: 1200,
       height: 800,
@@ -61,7 +61,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'warehouse-facility',
-      src: '/images/Warehouse-Facility.jpg',
+      src: '/images/warehouse-facility.jpg',
       alt: 'Warehouse Facility',
       width: 1200,
       height: 800,
@@ -71,7 +71,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'assembly-line',
-      src: '/images/Assembly-Line.jpg',
+      src: '/images/assembly-line.jpg',
       alt: 'Assembly Line',
       width: 1200,
       height: 800,
@@ -81,7 +81,7 @@ const GalleryPage: NextPage = () => {
     },
     {
       id: 'manufacturing-floor',
-      src: '/images/Production-Plant.jpg',
+      src: '/images/production-plant.jpg',
       alt: 'Manufacturing Floor',
       width: 1200,
       height: 800,

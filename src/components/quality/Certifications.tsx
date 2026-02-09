@@ -94,7 +94,7 @@ const Certifications: React.FC = () => {
                 {cert.id === 'iatf' ? (
                   <div className="relative w-[300px] h-[350px] overflow-hidden border border-muted rounded-md">
                     <img 
-                      src="/images/IATF-16949-2016.jpg"
+                      src="/images/iatf-16949-2016.jpg"
                       alt="Sanewal Auto Engineers IATF 16949:2016 Automotive Quality Management System certification"
                       className="object-contain w-full h-full"
                     />
@@ -102,7 +102,7 @@ const Certifications: React.FC = () => {
                 ) : (
                   <div className="relative w-[300px] h-[350px] overflow-hidden border border-muted rounded-md">
                     <img 
-                      src="/images/ISO-14001-2015.jpg"
+                      src="/images/iso-14001-2015.jpg"
                       alt="Sanewal Auto Engineers ISO 14001:2015 Environmental Management System certification"
                       className="object-contain w-full h-full"
                     />

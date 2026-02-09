@@ -24,22 +24,22 @@ const Clients: React.FC = () => {
     { 
       id: 1, 
       name: 'Greaves Cotton', 
-      logo: '/images/Greaves-Cotton.png' 
+      logo: '/images/greaves-cotton.png' 
     },
     { 
       id: 2, 
       name: 'Sonalika Tractors', 
-      logo: '/images/Sonalika-Tractors.png' 
+      logo: '/images/sonalika-tractors.png' 
     },
     { 
       id: 3, 
       name: 'New Holland', 
-      logo: '/images/New-Holland.png' 
+      logo: '/images/new-holland.png' 
     },
     { 
       id: 4, 
       name: 'Hero MotoCorp', 
-      logo: '/images/Hero-Moto-corp.png' 
+      logo: '/images/hero-moto-corp.png' 
     },
     // New client logos
     {
@@ -50,7 +50,7 @@ const Clients: React.FC = () => {
     {
       id: 6,
       name: 'Kohli Rubber Moulds',
-      logo: '/images/Kohli-rubber-moulds.jpg'
+      logo: '/images/kohli-rubber-moulds.jpg'
     },
     {
       id: 7,
@@ -60,67 +60,67 @@ const Clients: React.FC = () => {
     {
       id: 8,
       name: 'Sansera Engineering',
-      logo: '/images/Sansera-engineering.png'
+      logo: '/images/sansera-engineering.png'
     },
     {
       id: 9,
       name: 'Sandhar Ltd',
-      logo: '/images/Sandhar-ltd.png'
+      logo: '/images/sandhar-ltd.png'
     },
     {
       id: 10,
       name: 'Rockman Ltd',
-      logo: '/images/Rockman-ltd.png'
+      logo: '/images/rockman-ltd.png'
     },
     {
       id: 11,
       name: 'Anand Motor Ltd',
-      logo: '/images/Anand-Motor-ltd.png'
+      logo: '/images/anand-motor-ltd.png'
     },
     {
       id: 12,
       name: 'New Swan',
-      logo: '/images/New-Swan.png'
+      logo: '/images/new-swan.png'
     },
     {
       id: 13,
       name: 'ASK Automotive',
-      logo: '/images/Ask-Automotive.png'
+      logo: '/images/ask-automotive.png'
     },
     {
       id: 14,
       name: 'Rico Auto Industries',
-      logo: '/images/Rico-Auto-Industries.jpg'
+      logo: '/images/rico-auto-industries.jpg'
     },
     {
       id: 15,
       name: 'Life Long India',
-      logo: '/images/Life-Long-India.png'
+      logo: '/images/life-long-india.png'
     },
     {
       id: 16,
       name: 'AG Industries',
-      logo: '/images/AG-Industries.png'
+      logo: '/images/ag-industries.png'
     },
     {
       id: 17,
       name: 'Shigan Quantum',
-      logo: '/images/Shigan-Quantum.png'
+      logo: '/images/shigan-quantum.png'
     },
     {
       id: 18,
       name: 'Pheon Autotech',
-      logo: '/images/Pheon-Autotech.jpg'
+      logo: '/images/pheon-autotech.jpg'
     },
     {
       id: 19,
       name: 'Endurance Technology Limited',
-      logo: '/images/Endurance-Technology-Limited.png'
+      logo: '/images/endurance-technology-limited.png'
     },
     {
       id: 20,
       name: 'Munjal Showa',
-      logo: '/images/Munjal-Showa.png'
+      logo: '/images/munjal-showa.png'
     }
   ];
 

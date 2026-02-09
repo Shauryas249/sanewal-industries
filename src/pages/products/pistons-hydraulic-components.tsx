@@ -16,27 +16,27 @@ export default function PistonsHydraulicComponents() {
     {
       name: "Primary Piston",
       description: "High-performance piston for primary hydraulic systems",
-      imagePath: "/images/Primary-Piston.jpg"
+      imagePath: "/images/primary-piston.jpg"
     },
     {
       name: "Rear Piston",
       description: "Specialized piston for rear brake or hydraulic applications",
-      imagePath: "/images/Rear-Piston.jpg"
+      imagePath: "/images/rear-piston.jpg"
     },
     {
       name: "De-compression FCU",
       description: "Engine decompression mechanism for fluid control units",
-      imagePath: "/images/De-compression-FCU.jpg"
+      imagePath: "/images/de-compression-fcu.jpg"
     },
     {
       name: "Oil Lock Coller K60",
       description: "Specialized collar for oil sealing in hydraulic systems",
-      imagePath: "/images/Oil-Lock-Coller-K60.jpg"
+      imagePath: "/images/oil-lock-coller-k60.jpg"
     },
     {
       name: "Oil Lock Coller",
       description: "Standard oil lock collar for hydraulic applications",
-      imagePath: "/images/Oil-Lock-Coller.jpg"
+      imagePath: "/images/oil-lock-coller.jpg"
     }
   ];
 

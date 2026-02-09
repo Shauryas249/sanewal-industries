@@ -16,32 +16,32 @@ export default function FastenersConnectors() {
     {
       name: "Stud Hood",
       description: "High-strength stud for hood mounting and secure fastening",
-      imagePath: "/images/Stud-Hood.jpg"
+      imagePath: "/images/stud-hood.jpg"
     },
     {
       name: "Lock Nut",
       description: "Self-locking nut designed to prevent loosening under vibration",
-      imagePath: "/images/Lock-Nut.jpg"
+      imagePath: "/images/lock-nut.jpg"
     },
     {
       name: "Steering Head Nut",
       description: "Specialized nut for steering column assembly and adjustment",
-      imagePath: "/images/Steering-Head-Nut.jpg"
+      imagePath: "/images/steering-head-nut.jpg"
     },
     {
       name: "Fork Bolt",
       description: "High-strength bolt for suspension fork assembly",
-      imagePath: "/images/Fork-Bolt.jpg"
+      imagePath: "/images/fork-bolt.jpg"
     },
     {
       name: "Banjo Bolt M12",
       description: "Hollow bolt designed for fluid passage in brake and fuel systems",
-      imagePath: "/images/Banjo-Bolt-M12.jpg"
+      imagePath: "/images/banjo-bolt-m12.jpg"
     },
     {
       name: "Banjo Bolt M22",
       description: "Heavy-duty hollow bolt for high-pressure fluid systems",
-      imagePath: "/images/Banjo-Bolt-M22.jpg"
+      imagePath: "/images/banjo-bolt-m22.jpg"
     }
   ];
 

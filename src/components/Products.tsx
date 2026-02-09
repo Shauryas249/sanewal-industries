@@ -12,11 +12,11 @@ const Products: React.FC = () => {
       description: 'Essential fastening components designed for secure connections in automotive applications.',
       slug: 'fasteners-connectors',
       products: [
-        { name: 'Stud Hood', imagePath: '/images/Stud-Hood.jpg' },
-        { name: 'Lock Nut', imagePath: '/images/Lock-Nut.jpg' },
-        { name: 'Steering Head Nut', imagePath: '/images/Steering-Head-Nut.jpg' },
-        { name: 'Fork Bolt', imagePath: '/images/Fork-Bolt.jpg' },
-        { name: 'Banjo Bolt M12', imagePath: '/images/Banjo-Bolt-M12.jpg' }
+        { name: 'Stud Hood', imagePath: '/images/stud-hood.jpg' },
+        { name: 'Lock Nut', imagePath: '/images/lock-nut.jpg' },
+        { name: 'Steering Head Nut', imagePath: '/images/steering-head-nut.jpg' },
+        { name: 'Fork Bolt', imagePath: '/images/fork-bolt.jpg' },
+        { name: 'Banjo Bolt M12', imagePath: '/images/banjo-bolt-m12.jpg' }
       ]
     },
     {
@@ -25,11 +25,11 @@ const Products: React.FC = () => {
       description: 'Precision-engineered pistons and hydraulic parts for optimal fluid control and pressure management.',
       slug: 'pistons-hydraulic-components',
       products: [
-        { name: 'Primary Piston', imagePath: '/images/Primary-Piston.jpg' },
-        { name: 'Rear Piston', imagePath: '/images/Rear-Piston.jpg' },
-        { name: 'De-compression FCU', imagePath: '/images/De-compression-FCU.jpg' },
-        { name: 'Oil Lock Coller K60', imagePath: '/images/Oil-Lock-Coller-K60.jpg' },
-        { name: 'Oil Lock Coller', imagePath: '/images/Oil-Lock-Coller.jpg' }
+        { name: 'Primary Piston', imagePath: '/images/primary-piston.jpg' },
+        { name: 'Rear Piston', imagePath: '/images/rear-piston.jpg' },
+        { name: 'De-compression FCU', imagePath: '/images/de-compression-fcu.jpg' },
+        { name: 'Oil Lock Coller K60', imagePath: '/images/oil-lock-coller-k60.jpg' },
+        { name: 'Oil Lock Coller', imagePath: '/images/oil-lock-coller.jpg' }
       ]
     },
     {
@@ -38,10 +38,10 @@ const Products: React.FC = () => {
       description: 'High-strength rotational components manufactured to ensure reliable power transmission.',
       slug: 'shafts-rotational-components',
       products: [
-        { name: 'Spline Gear Shaft', imagePath: '/images/Spline-Gear-Shaft.jpg' },
-        { name: 'Pin Sector 10x64', imagePath: '/images/Pin-Sector-10x64.jpg' },
-        { name: 'Rotor Shaft Alternator', imagePath: '/images/Rotor-Shaft-Alternator.jpg' },
-        { name: 'Pin Gear Shift 28G20', imagePath: '/images/Pin-Gear-Shift-28G20.jpg' }
+        { name: 'Spline Gear Shaft', imagePath: '/images/spline-gear-shaft.jpg' },
+        { name: 'Pin Sector 10x64', imagePath: '/images/pin-sector-10x64.jpg' },
+        { name: 'Rotor Shaft Alternator', imagePath: '/images/rotor-shaft-alternator.jpg' },
+        { name: 'Pin Gear Shift 28G20', imagePath: '/images/pin-gear-shift-28g20.jpg' }
       ]
     },
     {
@@ -50,10 +50,10 @@ const Products: React.FC = () => {
       description: 'Durable bushings and collars designed for reduced friction and extended component life.',
       slug: 'bushings-collars',
       products: [
-        { name: 'Bush Pinion', imagePath: '/images/Bush-Pinion.jpg' },
-        { name: 'Coller 9MM', imagePath: '/images/Coller.jpg' },
-        { name: 'Coller Shift', imagePath: '/images/Coller-Shift.jpg' },
-        { name: 'Coller Wheel Side', imagePath: '/images/Coller-Wheel-Side.jpg' }
+        { name: 'Bush Pinion', imagePath: '/images/bush-pinion.jpg' },
+        { name: 'Coller 9MM', imagePath: '/images/coller.jpg' },
+        { name: 'Coller Shift', imagePath: '/images/coller-shift.jpg' },
+        { name: 'Coller Wheel Side', imagePath: '/images/coller-wheel-side.jpg' }
       ]
     },
     {
@@ -62,10 +62,10 @@ const Products: React.FC = () => {
       description: 'Specialized connectors that ensure proper integration between various automotive systems.',
       slug: 'adapters-connectors',
       products: [
-        { name: 'Upper Case', imagePath: '/images/Upper-Case.jpg' },
-        { name: 'Inner Pole', imagePath: '/images/Inner-Pole.jpg' },
-        { name: 'Plug', imagePath: '/images/Plug.jpg' },
-        { name: 'Adjecting Pin', imagePath: '/images/Adjecting-Pin.JPG' }
+        { name: 'Upper Case', imagePath: '/images/upper-case.jpg' },
+        { name: 'Inner Pole', imagePath: '/images/inner-pole.jpg' },
+        { name: 'Plug', imagePath: '/images/plug.jpg' },
+        { name: 'Adjecting Pin', imagePath: '/images/adjecting-pin.jpg' }
       ]
     },
   ];
